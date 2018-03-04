@@ -13,7 +13,6 @@ public class Event {
 
     private String contactPerson;
 
-    private String others;
 
 
 
