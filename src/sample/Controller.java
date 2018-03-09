@@ -4,10 +4,10 @@ import java.sql.*;
 public class Controller {
 
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DB_URL ="jdbc:mysql://localhost/RessourcePlaner";
+    private static final String DB_URL ="jdbc:mysql://localhost/ressourceplaner";
 
     private static final String USER_NAME = "root";
-    private static final String PASSWORD = "123";
+    private static final String PASSWORD = "root";
 
 
 
@@ -19,7 +19,7 @@ public class Controller {
 
 
 
-        try{
+       try{
             Class.forName(JDBC_DRIVER);
 
             System.out.println("Baut Verbindung auf");
