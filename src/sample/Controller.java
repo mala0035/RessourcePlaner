@@ -7,7 +7,7 @@ public class Controller {
     private static final String DB_URL ="jdbc:mysql://localhost/RessourcePlaner";
 
     private static final String USER_NAME = "root";
-    private static final String PASSWORD = "123";
+    private static final String PASSWORD = "root";
 
 
 
@@ -29,7 +29,7 @@ public class Controller {
 
             stmt = conn.createStatement();
 
-            String sqlQuery = "INSERT INTO Event VALUES(1, 'TestEvent', '2018-10-10', 'Pirmasens', 'M. Landau')";
+            String sqlQuery = "INSERT INTO Event VALUES(1, 'Umzug', '2018-10-10', 'Bundenthal', 'L. Dragosa')";
 
             stmt.executeUpdate(sqlQuery);
 
