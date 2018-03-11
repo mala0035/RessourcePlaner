@@ -13,8 +13,8 @@
                 <Button alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="228.0" text="M" textAlignment="CENTER" />
                 <Button alignment="CENTER" mnemonicParsing="false" text="W" textAlignment="CENTER" />
                 <Button alignment="CENTER" mnemonicParsing="false" text="T" textAlignment="CENTER" />
-                <Button minWidth="0.0" mnemonicParsing="false" prefHeight="25.0" text="=" />
-                <Button fx:id="newEventWindowButton" minWidth="41.0" mnemonicParsing="false" onAction="#handle" prefHeight="25.0" text="+" />
+                <Button fx:id="editChecklistButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleEditChecklistButton" prefHeight="25.0" text="=" textAlignment="CENTER" />
+                <Button fx:id="newEventWindowButton" minWidth="41.0" mnemonicParsing="false" onAction="#handleNewEventButton" prefHeight="25.0" text="+" />
             </buttons>
          <BorderPane.margin>
             <Insets left="20.0" top="5.0" />
