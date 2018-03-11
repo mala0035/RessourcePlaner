@@ -41,11 +41,11 @@
                <font>
                   <Font size="20.0" />
                </font></Label>
-            <Label text="Sonstiges" GridPane.rowIndex="3">
+            <Label text="Musik" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font></Label>
-            <Label text="Musik" GridPane.rowIndex="4">
+            <Label text="Sonstiges" GridPane.rowIndex="4">
                <font>
                   <Font size="20.0" />
                </font></Label>

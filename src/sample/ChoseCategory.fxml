@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.ChoseCategory"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.NewEventController">
+   <children>
+      <CheckBox layoutX="379.0" layoutY="53.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="148.0" text="Standard" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="378.0" layoutY="182.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="139.0" text="Sonstiges" AnchorPane.topAnchor="190.0">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="123.0" layoutY="53.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="139.0" text="Ausschank" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="379.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="161.0" text="Merchandise" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="123.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="114.0" text="Musik" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+   </children>
 </AnchorPane>
