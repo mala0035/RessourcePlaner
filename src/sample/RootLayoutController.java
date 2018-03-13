@@ -11,8 +11,6 @@ import java.io.IOException;
 
 public class RootLayoutController {
 
-    private Stage primaryStage;
-
 
     public void handleNewEventButton(ActionEvent event) {
         try {
@@ -24,7 +22,7 @@ public class RootLayoutController {
             stage.setScene(new Scene(root1));
             stage.show();
         } catch (IOException e) {
-            System.out.println("cant load");
+            e.printStackTrace();
         }
 
     }
@@ -44,6 +42,5 @@ public class RootLayoutController {
         }
 
     }
-
 }
 

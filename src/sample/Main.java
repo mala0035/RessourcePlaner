@@ -2,16 +2,13 @@ package sample;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
-
 import java.io.IOException;
+import java.time.YearMonth;
 
 
 public class Main extends Application {
@@ -30,6 +27,7 @@ public class Main extends Application {
     }
 
 
+
     public static void main(String[] args) { launch(args); }
 
     public void initRootLayout() {
@@ -39,12 +37,18 @@ public class Main extends Application {
             rootLayout = (BorderPane) loader.load();
 
             Scene scene1 = new Scene(rootLayout, 1024, 720);
+            rootLayout.setCenter(new HBox(new FullCalendarView(YearMonth.now()).getView()));
+
+
             primaryStage.setScene(scene1);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
+
 }
 
 

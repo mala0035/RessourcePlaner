@@ -1,14 +1,20 @@
 package sample;
+import javafx.fxml.FXML;
+import javafx.scene.layout.Pane;
+
 import java.sql.*;
 
 public class Controller {
 
+    @FXML
+    Pane calendarPane;
+
+    //create connection to database
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DB_URL ="jdbc:mysql://localhost/RessourcePlaner";
 
     private static final String USER_NAME = "root";
     private static final String PASSWORD = "root";
-
 
 
     public static void buildConnection () {
