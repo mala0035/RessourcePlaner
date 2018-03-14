@@ -6,9 +6,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.YearMonth;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 
 public class FullCalendarView {
@@ -16,18 +18,20 @@ public class FullCalendarView {
     private ArrayList<AnchorPaneNode> allCalendarDays = new ArrayList<>(35);
     private VBox view;
     private Text calendarTitle;
-    private YearMonth currentYearMonth;
+    private LocalDate currentYearMonth;
+
 
     /**
      * Create a calendar view
      * @param yearMonth year month to create the calendar of
      */
-    public FullCalendarView(YearMonth yearMonth) {
+    public FullCalendarView(LocalDate yearMonth) {
         currentYearMonth = yearMonth;
         // Create the calendar grid pane
         GridPane calendar = new GridPane();
         calendar.setPrefSize(600, 400);
         calendar.setGridLinesVisible(true);
+
         // Create rows and columns with anchor panes for the calendar
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 7; j++) {
@@ -38,9 +42,9 @@ public class FullCalendarView {
             }
         }
         // Days of the week labels
-        Text[] dayNames = new Text[]{ new Text("Sunday"), new Text("Monday"), new Text("Tuesday"),
-                new Text("Wednesday"), new Text("Thursday"), new Text("Friday"),
-                new Text("Saturday") };
+        Text[] dayNames = new Text[]{ new Text("Sonntag"), new Text("Montag"), new Text("Dienstag"),
+                new Text("Mittwoch"), new Text("Donnerstag"), new Text("Freitag"),
+                new Text("Samstag") };
         GridPane dayLabels = new GridPane();
         dayLabels.setPrefWidth(600);
         Integer col = 0;
@@ -59,17 +63,19 @@ public class FullCalendarView {
         nextMonth.setOnAction(e -> nextMonth());
         HBox titleBar = new HBox(previousMonth, calendarTitle, nextMonth);
         titleBar.setAlignment(Pos.BASELINE_CENTER);
+
         // Populate calendar with the appropriate day numbers
         populateCalendar(yearMonth);
         // Create the calendar view
         view = new VBox(titleBar, dayLabels, calendar);
+
     }
 
     /**
      * Set the days of the calendar to correspond to the appropriate date
      * @param yearMonth year and month of month to render
      */
-    public void populateCalendar(YearMonth yearMonth) {
+    public void populateCalendar(LocalDate yearMonth) {
         // Get the date we want to start with on the calendar
         LocalDate calendarDate = LocalDate.of(yearMonth.getYear(), yearMonth.getMonthValue(), 1);
         // Dial back the day until it is SUNDAY (unless the month starts on a sunday)
@@ -89,7 +95,12 @@ public class FullCalendarView {
             calendarDate = calendarDate.plusDays(1);
         }
         // Change the title of the calendar
-        calendarTitle.setText(yearMonth.getMonth().toString() + " " + String.valueOf(yearMonth.getYear()));
+
+        SimpleDateFormat formatDateToGermany = new SimpleDateFormat( "LLLL, YY", Locale.GERMANY );
+        Date currentGermanyMonth = new Date(yearMonth.getYear(),yearMonth.getMonthValue(),0);
+
+        calendarTitle.setText(formatDateToGermany.format(currentGermanyMonth));
+
     }
 
     /**
@@ -111,6 +122,8 @@ public class FullCalendarView {
     public VBox getView() {
         return view;
     }
+
+
 
     public ArrayList<AnchorPaneNode> getAllCalendarDays() {
         return allCalendarDays;

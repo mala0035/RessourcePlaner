@@ -2,19 +2,19 @@ package sample;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.time.YearMonth;
+import java.time.LocalDate;
 
 
 public class Main extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
+    private FullCalendarView gettingTitlebar;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -23,7 +23,7 @@ public class Main extends Application {
     this.primaryStage.setTitle("Ressource Planer");
 
     initRootLayout();
-//    Controller.buildConnection();
+    //Controller.buildConnection();
     }
 
 
@@ -37,7 +37,8 @@ public class Main extends Application {
             rootLayout = (BorderPane) loader.load();
 
             Scene scene1 = new Scene(rootLayout, 1024, 720);
-            rootLayout.setCenter(new HBox(new FullCalendarView(YearMonth.now()).getView()));
+            rootLayout.setCenter(new HBox(new FullCalendarView(LocalDate.now()).getView()));
+
 
 
             primaryStage.setScene(scene1);
