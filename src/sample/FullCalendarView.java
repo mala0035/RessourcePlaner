@@ -19,7 +19,7 @@ public class FullCalendarView {
     private VBox view;
     private Text calendarTitle;
     private LocalDate currentYearMonth;
-
+    public HBox titleBar;
 
     /**
      * Create a calendar view
@@ -54,6 +54,7 @@ public class FullCalendarView {
             ap.setBottomAnchor(txt, 5.0);
             ap.getChildren().add(txt);
             dayLabels.add(ap, col++, 0);
+            dayLabels.setAlignment(Pos.CENTER);
         }
         // Create calendarTitle and buttons to change current month
         calendarTitle = new Text();
@@ -61,13 +62,17 @@ public class FullCalendarView {
         previousMonth.setOnAction(e -> previousMonth());
         Button nextMonth = new Button(">>");
         nextMonth.setOnAction(e -> nextMonth());
-        HBox titleBar = new HBox(previousMonth, calendarTitle, nextMonth);
-        titleBar.setAlignment(Pos.BASELINE_CENTER);
+        titleBar = new HBox(previousMonth, calendarTitle, nextMonth);
+        titleBar.setAlignment(Pos.CENTER);
+        titleBar.setSpacing(10);
+
+
 
         // Populate calendar with the appropriate day numbers
         populateCalendar(yearMonth);
         // Create the calendar view
-        view = new VBox(titleBar, dayLabels, calendar);
+        view = new VBox(dayLabels, calendar);
+
 
     }
 
@@ -122,6 +127,9 @@ public class FullCalendarView {
     public VBox getView() {
         return view;
     }
+    public HBox getTitleBar() {
+        return titleBar;
+    }
 
 
 
@@ -133,3 +141,4 @@ public class FullCalendarView {
         this.allCalendarDays = allCalendarDays;
     }
 }
+

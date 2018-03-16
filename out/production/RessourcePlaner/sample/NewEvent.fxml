@@ -15,7 +15,7 @@
         <ButtonBar layoutX="386.0" layoutY="343.0" prefHeight="43.0" prefWidth="200.0">
             <buttons>
                 <Button mnemonicParsing="false" prefHeight="59.0" text="Abbrechen" />
-                <Button mnemonicParsing="false" prefHeight="82.0" text="Event anlegen" textAlignment="CENTER" wrapText="true" />
+                <Button mnemonicParsing="false" onAction="#handleGenerateEventButton" prefHeight="82.0" text="Event anlegen" textAlignment="CENTER" wrapText="true" />
             </buttons>
         </ButtonBar>
         <GridPane fx:id="eventTable" layoutX="57.0" layoutY="44.0" prefHeight="175.0" prefWidth="538.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="20.0">

@@ -14,7 +14,6 @@ public class Main extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
-    private FullCalendarView gettingTitlebar;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -23,7 +22,7 @@ public class Main extends Application {
     this.primaryStage.setTitle("Ressource Planer");
 
     initRootLayout();
-    //Controller.buildConnection();
+    Controller.buildConnection();
     }
 
 
@@ -36,10 +35,9 @@ public class Main extends Application {
             loader.setLocation(Main.class.getResource("RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
 
-            Scene scene1 = new Scene(rootLayout, 1024, 720);
-            rootLayout.setCenter(new HBox(new FullCalendarView(LocalDate.now()).getView()));
-
-
+            Scene scene1 = new Scene(rootLayout, 600, 550);
+           rootLayout.setCenter(new HBox(new FullCalendarView(LocalDate.now()).getView()));
+            rootLayout.setBottom(new HBox(new FullCalendarView(LocalDate.now()).getTitleBar()));
 
             primaryStage.setScene(scene1);
             primaryStage.show();

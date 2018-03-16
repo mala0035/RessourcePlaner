@@ -1,7 +1,7 @@
 package sample;
-
-
 import java.sql.*;
+
+
 
 public class Controller {
 
@@ -20,7 +20,6 @@ public class Controller {
 
 
 
-
         try{
             Class.forName(JDBC_DRIVER);
 
@@ -31,19 +30,26 @@ public class Controller {
 
             stmt = conn.createStatement();
 
-            String sqlQuery = "INSERT INTO Event VALUES(1, 'Umzug', '2018-10-10', 'Bundenthal', 'L. Dragosa')";
 
-            stmt.executeUpdate(sqlQuery);
+
+            String sqlQuery = "INSERT INTO Event (EventName,EventDate,Place,ContactPerson)" +
+                              "VALUES ('Umzug','2018-10-10','Bundenthal','L. Dragosa')";
+
+
+           stmt.executeUpdate(sqlQuery);
 
 
             String getEvents = "SELECT * FROM Event";
 
             ResultSet resultSet = stmt.executeQuery(getEvents);
 
-            while(resultSet.next()){
-                String name = resultSet.getString("Name");
 
+            while(resultSet.next()){
+                String name = resultSet.getString("EventName");
+                String getID = resultSet.getString("ID");
                 System.out.println("Name of event is: " + name);
+                System.out.println("The ID is " + getID);
+
             }
 
 

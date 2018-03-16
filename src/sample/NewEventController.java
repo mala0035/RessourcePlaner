@@ -1,13 +1,30 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
 
+
+
 public class NewEventController {
+
+
+    @FXML
+    private TextField nameOfEventField;
+    @FXML
+    private TextField dateField;
+    @FXML
+    private TextField placeField;
+    @FXML
+    private TextField contactPersonField;
+
+    String eventData;
+
 
     public void handleChoseCategoryButton(ActionEvent event3) {
         try {
@@ -24,4 +41,15 @@ public class NewEventController {
 
 
     }
+
+    public void handleGenerateEventButton(ActionEvent event4){
+    if ((nameOfEventField.getText() != null && !nameOfEventField.getText().isEmpty())){
+        eventData=nameOfEventField.getText() +"," + dateField.getText().toString() +"," + placeField.getText()+"," + contactPersonField.getText();
+        System.out.println(eventData);
+    }
+
+    }
+
+
+
 }
