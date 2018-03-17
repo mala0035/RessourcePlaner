@@ -23,9 +23,6 @@ public class NewEventController {
     @FXML
     private TextField contactPersonField;
 
-    String eventData;
-
-
     public void handleChoseCategoryButton(ActionEvent event3) {
         try {
             FXMLLoader fxmlLoader3 = new FXMLLoader(getClass().getResource("ChoseCategory.fxml"));
@@ -38,18 +35,10 @@ public class NewEventController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
     public void handleGenerateEventButton(ActionEvent event4){
-    if ((nameOfEventField.getText() != null && !nameOfEventField.getText().isEmpty())){
-        eventData=nameOfEventField.getText() +"," + dateField.getText().toString() +"," + placeField.getText()+"," + contactPersonField.getText();
-        System.out.println(eventData);
+        Event newEvent = new Event(nameOfEventField.getText(),dateField.getText().toString(),placeField.getText(),contactPersonField.getText());
+        Controller.insert(newEvent);
     }
-
-    }
-
-
-
 }

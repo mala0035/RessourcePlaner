@@ -22,7 +22,7 @@ public class Main extends Application {
     this.primaryStage.setTitle("Ressource Planer");
 
     initRootLayout();
-    Controller.buildConnection();
+
     }
 
 

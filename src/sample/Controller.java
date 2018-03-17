@@ -7,65 +7,50 @@ public class Controller {
 
     //create connection to database
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DB_URL ="jdbc:mysql://localhost/RessourcePlaner";
-
+    private static final String DB_URL = "jdbc:mysql://localhost/RessourcePlaner";
     private static final String USER_NAME = "root";
     private static final String PASSWORD = "root";
 
+    private static Connection databaseConnection;
 
-    public static void buildConnection () {
 
-        final Connection conn;
-        final Statement stmt;
+    private Controller(){}
+
+
+    public static void insert(Event event){
+
+        createDatabaseConnection();
 
 
 
         try{
-            Class.forName(JDBC_DRIVER);
+            Statement statement = databaseConnection.createStatement();
 
-            System.out.println("Baut Verbindung auf");
-            conn = DriverManager.getConnection( DB_URL, USER_NAME,PASSWORD);
+            String sqlQuery = "INSERT INTO Event (EventName,EventDate,Place,ContactPerson) VALUES ('"+event.getName()+"','"+event.getDate().toString()+"','"+event.getPlace()+"','"+event.getContactPerson()+"')";
 
-            System.out.println("Create Statement");
-
-            stmt = conn.createStatement();
-
-
-
-            String sqlQuery = "INSERT INTO Event (EventName,EventDate,Place,ContactPerson)" +
-                              "VALUES ('Umzug','2018-10-10','Bundenthal','L. Dragosa')";
-
-
-           stmt.executeUpdate(sqlQuery);
-
-
-            String getEvents = "SELECT * FROM Event";
-
-            ResultSet resultSet = stmt.executeQuery(getEvents);
-
-
-            while(resultSet.next()){
-                String name = resultSet.getString("EventName");
-                String getID = resultSet.getString("ID");
-                System.out.println("Name of event is: " + name);
-                System.out.println("The ID is " + getID);
-
-            }
-
-
-        }catch(ClassNotFoundException | SQLException ex){
+            statement.executeUpdate(sqlQuery);
+        }catch (SQLException ex){
             ex.printStackTrace();
-
-
         }
-
-
 
     }
 
+    private static void createDatabaseConnection(){
+
+        if(databaseConnection == null) {
+
+            try {
+                Class.forName(JDBC_DRIVER);
+
+                System.out.println("Baut Verbindung auf");
+                databaseConnection = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
+
+            } catch (ClassNotFoundException |SQLException ex) {
+                    ex.printStackTrace();
 
 
-
-
-
+            }
+        }
+    }
 }
+
