@@ -23,12 +23,14 @@ public class NewEventController {
     @FXML
     private TextField contactPersonField;
 
+    private static Stage stage3 = new Stage();
+
+
+
     public void handleChoseCategoryButton(ActionEvent event3) {
         try {
             FXMLLoader fxmlLoader3 = new FXMLLoader(getClass().getResource("ChoseCategory.fxml"));
             Parent root3 = (Parent) fxmlLoader3.load();
-            Stage stage3 = new Stage();
-
             stage3.setTitle("Kategorien Wählen");
             stage3.setScene(new Scene(root3));
             stage3.show();
@@ -41,4 +43,9 @@ public class NewEventController {
         Event newEvent = new Event(nameOfEventField.getText(),dateField.getText().toString(),placeField.getText(),contactPersonField.getText());
         Controller.insert(newEvent);
     }
+
+    public void closeWindow(){
+        stage3.close();
+    }
+
 }

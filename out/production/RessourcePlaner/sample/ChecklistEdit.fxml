@@ -53,8 +53,8 @@
       </GridPane>
       <ButtonBar layoutX="386.0" layoutY="337.0" prefHeight="49.0" prefWidth="200.0">
         <buttons>
-          <Button mnemonicParsing="false" text="Abbrechen" />
-            <Button mnemonicParsing="false" text="Anwenden" />
+            <Button fx:id="cancelChecklistEditButton" mnemonicParsing="false" prefHeight="59.0" text="Abbrechen" />
+            <Button fx:id="applyCategoryButton" mnemonicParsing="false" prefHeight="59.0" text="Anwenden" />
         </buttons>
       </ButtonBar>
    </children>
