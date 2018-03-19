@@ -44,6 +44,13 @@ public class NewEventController {
         Controller.insert(newEvent);
     }
 
+    public void closeNewEventButton(ActionEvent event5){
+    RootLayoutController close= new RootLayoutController();
+    close.closeNewEventWindow();
+
+
+    }
+
     public void closeWindow(){
         stage3.close();
     }

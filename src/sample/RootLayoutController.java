@@ -11,16 +11,18 @@ import java.io.IOException;
 
 public class RootLayoutController {
 
+    public static Stage stage1 = new Stage();
+    public static Stage stage2 = new Stage();
+
 
     public void handleNewEventButton(ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("NewEvent.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
 
-            stage.setTitle("Neues Event");
-            stage.setScene(new Scene(root1));
-            stage.show();
+            stage1.setTitle("Neues Event");
+            stage1.setScene(new Scene(root1));
+            stage1.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -32,7 +34,6 @@ public class RootLayoutController {
         try {
             FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("ChecklistEdit.fxml"));
             Parent root2 = (Parent) fxmlLoader2.load();
-            Stage stage2 = new Stage();
 
             stage2.setTitle("Kategorien Bearbeiten");
             stage2.setScene(new Scene(root2));
@@ -42,5 +43,11 @@ public class RootLayoutController {
         }
 
     }
+
+    public void closeNewEventWindow(){
+        stage1.close();
+
+    }
+
 }
 
