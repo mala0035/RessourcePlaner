@@ -41,7 +41,7 @@ public class NewEventController {
 
     public void handleGenerateEventButton(ActionEvent event4){
         Event newEvent = new Event(nameOfEventField.getText(),dateField.getText().toString(),placeField.getText(),contactPersonField.getText());
-        Controller.insert(newEvent);
+        DatabaseController.insertEvent(newEvent);
     }
 
     public void closeNewEventButton(ActionEvent event5){
