@@ -1,7 +1,7 @@
 package sample;
 import java.sql.*;
-
-
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class DatabaseController {
 
@@ -10,16 +10,15 @@ public class DatabaseController {
     private static final String DB_URL = "jdbc:mysql://localhost/RessourcePlaner";
     private static final String USER_NAME = "root";
     private static final String PASSWORD = "root";
-
     private static Connection databaseConnection;
 
 
     private DatabaseController(){}
 
 
-    public static void insertCategory(String selectedCategory){
+    public static Collection<Article> readCategory(String selectedCategory){
         createDatabaseConnection();
-
+        Collection<Article> articles = new ArrayList<>();
 
         try {
             Statement statement = databaseConnection.createStatement();
@@ -30,11 +29,13 @@ public class DatabaseController {
 
             while(categoryResult.next()){
                 String articleName = categoryResult.getString("ArticleName");
+                Article article = new Article(articleName);
+                articles.add(article);
 
                 String categoryName = categoryResult.getString("Category");
                 System.out.println(articleName +", " + categoryName);
-                FilteredChecklistController setValues = new FilteredChecklistController();
-                setValues.getValues(articleName);
+
+
 
             }
 
@@ -43,6 +44,7 @@ public class DatabaseController {
         }catch(SQLException ex){
             ex.printStackTrace();
         }
+        return articles;
     }
 
 

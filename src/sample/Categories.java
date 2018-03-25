@@ -8,7 +8,7 @@ public class Categories {
     private boolean servingCheckbox = false;
     private boolean othersCheckbox= false;
 
-
+    //Constructor
     public Categories(boolean musicCheckbox,boolean standardCheckbox, boolean merchandiseCheckbox,boolean servingCheckbox,boolean othersCheckbox){
         this.merchandiseCheckbox= merchandiseCheckbox;
         this.musicCheckbox= musicCheckbox;
@@ -18,7 +18,7 @@ public class Categories {
     }
 
 
-
+    //getter
     public boolean getMusicCheckbox(){
         return musicCheckbox;
     }
