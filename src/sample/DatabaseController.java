@@ -20,6 +20,7 @@ public class DatabaseController {
     public static void insertCategory(String selectedCategory){
         createDatabaseConnection();
 
+
         try {
             Statement statement = databaseConnection.createStatement();
 
@@ -32,11 +33,11 @@ public class DatabaseController {
 
                 String categoryName = categoryResult.getString("Category");
                 System.out.println(articleName +", " + categoryName);
-
-
-
+                FilteredChecklistController setValues = new FilteredChecklistController();
+                setValues.getValues(articleName);
 
             }
+
 
 
         }catch(SQLException ex){
