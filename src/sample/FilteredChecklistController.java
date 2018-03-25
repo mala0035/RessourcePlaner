@@ -14,7 +14,7 @@ public class FilteredChecklistController {
     private TableView <Article> articles;
 
 
-
+    //initialize articles
     @FXML
     private void initialize(){
         articles.setItems(FXCollections.observableArrayList(DatabaseController.readCategory("Ausschank")));

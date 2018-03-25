@@ -15,6 +15,7 @@ public class RootLayoutController {
     public static Stage stage2 = new Stage();
 
 
+    //Open newEventWindow
     public void handleNewEventButton(ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("NewEvent.fxml"));
@@ -29,7 +30,7 @@ public class RootLayoutController {
 
     }
 
-
+    //Open editChecklistWindow
     public void handleEditChecklistButton(ActionEvent event2) {
         try {
             FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("ChecklistEdit.fxml"));
@@ -44,6 +45,7 @@ public class RootLayoutController {
 
     }
 
+    //Close newEventWindow
     public void closeNewEventWindow(){
         stage1.close();
 

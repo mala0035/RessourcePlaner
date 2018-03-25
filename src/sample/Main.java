@@ -9,11 +9,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.time.LocalDate;
 
-
 public class Main extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
+
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -21,14 +22,16 @@ public class Main extends Application {
     this.primaryStage = primaryStage;
     this.primaryStage.setTitle("Ressource Planer");
 
+
     initRootLayout();
 
     }
 
 
-
+    //Main method
     public static void main(String[] args) { launch(args); }
 
+    //open RootLayout window
     public void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -36,7 +39,7 @@ public class Main extends Application {
             rootLayout = (BorderPane) loader.load();
 
             Scene scene1 = new Scene(rootLayout, 600, 550);
-           rootLayout.setCenter(new HBox(new FullCalendarView(LocalDate.now()).getView()));
+            rootLayout.setCenter(new HBox(new FullCalendarView(LocalDate.now()).getView()));
             rootLayout.setBottom(new HBox(new FullCalendarView(LocalDate.now()).getTitleBar()));
 
             primaryStage.setScene(scene1);

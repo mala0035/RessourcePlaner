@@ -18,7 +18,7 @@ public class Event {
 
 
 
-
+    //Constructor
     public Event(String name,String date,String place, String contactPerson){
         this.name=name;
         this.date=parse(date);
@@ -27,12 +27,12 @@ public class Event {
 
     }
 
-
+    //parse the date
     private LocalDate parse (String dateToParse){
     return LocalDate.parse(dateToParse,FORMAT);
     }
 
-
+    //getter
     public String getName(){
         return name;
     }

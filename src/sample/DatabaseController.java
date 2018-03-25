@@ -34,26 +34,19 @@ public class DatabaseController {
 
                 String categoryName = categoryResult.getString("Category");
                 System.out.println(articleName +", " + categoryName);
-
-
-
             }
-
-
-
         }catch(SQLException ex){
             ex.printStackTrace();
         }
         return articles;
     }
 
-
+    //put the Userinput into database
     public static void insertEvent(Event event){
-
+        //Create connection to Database
         createDatabaseConnection();
 
-
-
+        //Insert Userinput into Database
         try{
             Statement statement = databaseConnection.createStatement();
 
@@ -66,6 +59,7 @@ public class DatabaseController {
 
     }
 
+    //check if there is already a connection. If it's not, create one
     private static void createDatabaseConnection(){
 
         if(databaseConnection == null) {

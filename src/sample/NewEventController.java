@@ -26,7 +26,7 @@ public class NewEventController {
     private static Stage stage3 = new Stage();
 
 
-
+    //Button to open ChoseCategory window
     public void handleChoseCategoryButton(ActionEvent event3) {
         try {
             FXMLLoader fxmlLoader3 = new FXMLLoader(getClass().getResource("ChoseCategory.fxml"));
@@ -39,11 +39,15 @@ public class NewEventController {
         }
     }
 
+    //Button to create an event
     public void handleGenerateEventButton(ActionEvent event4){
+        //save user input to Event object
         Event newEvent = new Event(nameOfEventField.getText(),dateField.getText().toString(),placeField.getText(),contactPersonField.getText());
+        //call insertEvent to insert user input to database
         DatabaseController.insertEvent(newEvent);
     }
 
+    //Button to close NewEventWindow
     public void closeNewEventButton(ActionEvent event5){
     RootLayoutController close= new RootLayoutController();
     close.closeNewEventWindow();
@@ -51,6 +55,7 @@ public class NewEventController {
 
     }
 
+    //close Window
     public void closeWindow(){
         stage3.close();
     }
