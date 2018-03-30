@@ -2,6 +2,8 @@ package sample;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class DatabaseController {
 
@@ -16,30 +18,29 @@ public class DatabaseController {
     private DatabaseController(){}
 
 
-    public static Collection<Article> readCategory(String selectedCategory){
+     public static Collection<Article> readCategory(List<Categories> categoryList){
         createDatabaseConnection();
         Collection<Article> articles = new ArrayList<>();
 
-        try {
+       try {
             Statement statement = databaseConnection.createStatement();
+           String collect = categoryList.stream().map(Categories::name).collect(Collectors.joining("','"));
+           String getCategory = "SELECT ArticleName, Category FROM Storage WHERE Category IN ('"+collect+"')";
 
-            String getCategory = "SELECT ArticleName, Category FROM Storage WHERE Category='Ausschank' ";
-
-            ResultSet categoryResult = statement.executeQuery(getCategory);
-
+           ResultSet categoryResult = statement.executeQuery(getCategory);
             while(categoryResult.next()){
                 String articleName = categoryResult.getString("ArticleName");
                 Article article = new Article(articleName);
-                articles.add(article);
+                articles.add(new Article(article.getName()));
 
-                String categoryName = categoryResult.getString("Category");
-                System.out.println(articleName +", " + categoryName);
             }
         }catch(SQLException ex){
             ex.printStackTrace();
         }
         return articles;
     }
+
+
 
     //put the Userinput into database
     public static void insertEvent(Event event){

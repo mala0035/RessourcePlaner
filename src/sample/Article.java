@@ -2,16 +2,20 @@ package sample;
 
 public class Article {
 
-    private String name;
+    private final String name;
 
-    //constructor
-    public Article(String name){
+    //private final Categories category;
 
+    public Article(String name) {
         this.name = name;
+        //this.category = category;
     }
 
-    //getter
-    public String getName(){
+    public String getName() {
         return name;
     }
+
+    //public Categories getCategory() {
+      //  return category;
+   // }
 }

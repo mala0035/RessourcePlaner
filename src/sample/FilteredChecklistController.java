@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.Article;
 
 public class FilteredChecklistController {
 
@@ -11,13 +12,22 @@ public class FilteredChecklistController {
     private TableColumn articleNameColumn;
 
     @FXML
-    private TableView <Article> articles;
+    private TableView<Article> articles;
 
 
-    //initialize articles
+
     @FXML
-    private void initialize(){
-        articles.setItems(FXCollections.observableArrayList(DatabaseController.readCategory("Ausschank")));
+    private void initialize() {
         articleNameColumn.setCellValueFactory(new PropertyValueFactory<Article, String>("name"));
-    }
+        }
+
+        public void setItems(ChoseCategoryController controller){
+            articles.setItems(FXCollections.observableArrayList(DatabaseController.readCategory(controller.getSelectedCategories())));
+        }
+
+
+
+
 }
+
+

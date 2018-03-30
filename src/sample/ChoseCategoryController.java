@@ -7,7 +7,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.stage.Stage;
 import java.io.IOException;
-
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 public class ChoseCategoryController {
@@ -31,19 +33,36 @@ public class ChoseCategoryController {
     //Button to open the FilteredChecklist Window and initialize values from the selected Categories
     public void createFilteredChecklistButton(ActionEvent event3) {
         //Check if the Categories are selected
-        Categories newCategory = new Categories(servingCheckbox.isSelected(),musicCheckbox.isSelected(),merchandiseCheckbox.isSelected(),othersCheckbox.isSelected(),standardCheckbox.isSelected());
+       // Categories newCategory = new Categories(servingCheckbox.isSelected(),musicCheckbox.isSelected(),merchandiseCheckbox.isSelected(),othersCheckbox.isSelected(),standardCheckbox.isSelected());
+
+
+
 
         //load the FilteredChecklist Window
         try {
             FXMLLoader fxmlLoader3 = new FXMLLoader(getClass().getResource("FilteredChecklist.fxml"));
             Parent root4 = (Parent) fxmlLoader3.load();
+            FilteredChecklistController fcController = fxmlLoader3.getController();
+            fcController.setItems(this);
+
             stage4.setTitle("Gefilterte Checkliste");
             stage4.setScene(new Scene(root4));
             stage4.show();
 
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    List<Categories> getSelectedCategories() {
+        return Stream.of(servingCheckbox, musicCheckbox,merchandiseCheckbox,othersCheckbox,standardCheckbox)
+                .filter(CheckBox::isSelected)
+                .map(CheckBox::getText)
+                .map(String::toUpperCase)
+                .map(Categories::valueOf)
+                .collect(Collectors.toList());
     }
 
 }
