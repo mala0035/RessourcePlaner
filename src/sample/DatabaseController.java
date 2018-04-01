@@ -25,13 +25,13 @@ public class DatabaseController {
        try {
             Statement statement = databaseConnection.createStatement();
            String collect = categoryList.stream().map(Categories::name).collect(Collectors.joining("','"));
-           String getCategory = "SELECT ArticleName, Category FROM Storage WHERE Category IN ('"+collect+"')";
+           String getCategory = "SELECT * FROM Storage WHERE Category IN ('"+collect+"')";
 
            ResultSet categoryResult = statement.executeQuery(getCategory);
             while(categoryResult.next()){
                 String articleName = categoryResult.getString("ArticleName");
-                Article article = new Article(articleName);
-                articles.add(new Article(article.getName()));
+                int storageId= categoryResult.getInt("StorageID");
+                articles.add(new Article(articleName,storageId,0));
 
             }
         }catch(SQLException ex){
@@ -40,6 +40,31 @@ public class DatabaseController {
         return articles;
     }
 
+    public static Collection<Article> findBy(Collection<Integer> ids){
+        createDatabaseConnection();
+        Collection<Article> articles = new ArrayList<>();
+
+
+        try{
+            Statement statement = databaseConnection.createStatement();
+            String collect = ids.stream().map(id -> id.toString()).collect(Collectors.joining(","));
+            String getArticlesFromIds = "SELECT * FROM Storage WHERE StorageID IN ("+collect+")";
+
+            ResultSet resultSet = statement.executeQuery(getArticlesFromIds);
+            while(resultSet.next()){
+                String articleName = resultSet.getString("ArticleName");
+                int id = resultSet.getInt("StorageID");
+                int articleAmount = resultSet.getInt("Amount");
+                Article article = new Article(articleName,id,articleAmount);
+                articles.add(article);
+
+            }
+
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        }
+        return articles;
+    }
 
 
     //put the Userinput into database
@@ -77,6 +102,21 @@ public class DatabaseController {
 
             }
         }
+    }
+
+    public static void updateDB (int value, Article article) {
+        try {
+            Statement statement = databaseConnection.createStatement();
+
+            String update = "UPDATE Storage SET Amount = "+value+" WHERE StorageID = "+article.getId()+" ";
+
+
+            statement.executeUpdate(update);
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
     }
 }
 
