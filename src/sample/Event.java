@@ -28,9 +28,11 @@ public class Event {
     }
 
     //parse the date
-    private LocalDate parse (String dateToParse){
+    public LocalDate parse (String dateToParse){
     return LocalDate.parse(dateToParse,FORMAT);
     }
+
+
 
     //getter
     public String getName(){

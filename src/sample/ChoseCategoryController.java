@@ -20,7 +20,7 @@ public class ChoseCategoryController {
     @FXML private CheckBox musicCheckbox;
     @FXML private CheckBox servingCheckbox;
 
- private Stage stage4 = new Stage();
+ private static Stage stage4 = new Stage();
 
     //Button to close the ChoseCateroy Window
     public void cancelChoseCategoryButton(ActionEvent event) {
@@ -32,11 +32,6 @@ public class ChoseCategoryController {
 
     //Button to open the FilteredChecklist Window and initialize values from the selected Categories
     public void createFilteredChecklistButton(ActionEvent event3) {
-        //Check if the Categories are selected
-       // Categories newCategory = new Categories(servingCheckbox.isSelected(),musicCheckbox.isSelected(),merchandiseCheckbox.isSelected(),othersCheckbox.isSelected(),standardCheckbox.isSelected());
-
-
-
 
         //load the FilteredChecklist Window
         try {
@@ -63,6 +58,10 @@ public class ChoseCategoryController {
                 .map(String::toUpperCase)
                 .map(Categories::valueOf)
                 .collect(Collectors.toList());
+    }
+
+    public void closeFilteredChecklistWindow(){
+        stage4.close();
     }
 
 }

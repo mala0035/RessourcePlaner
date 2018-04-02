@@ -19,7 +19,7 @@
       </TableView>
       <ButtonBar layoutX="386.0" layoutY="346.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="25.0">
         <buttons>
-          <Button mnemonicParsing="false" text="Abbrechen" />
+          <Button fx:id="CancelFilteredChecklistButton" mnemonicParsing="false" onAction="#closeFilteredCategoryButton" text="Abbrechen" />
             <Button mnemonicParsing="false" onAction="#save" text="Speichern" />
         </buttons>
       </ButtonBar>

@@ -5,10 +5,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
-
+import java.sql.SQLException;
+import java.text.DateFormat;
 
 
 public class NewEventController {
@@ -24,7 +26,7 @@ public class NewEventController {
     private TextField contactPersonField;
 
     private static Stage stage3 = new Stage();
-
+    RootLayoutController close= new RootLayoutController();
 
     //Button to open ChoseCategory window
     public void handleChoseCategoryButton(ActionEvent event3) {
@@ -42,21 +44,46 @@ public class NewEventController {
     //Button to create an event
     public void handleGenerateEventButton(ActionEvent event4){
         //save user input to Event object
-        Event newEvent = new Event(nameOfEventField.getText(),dateField.getText().toString(),placeField.getText(),contactPersonField.getText());
-        //call insertEvent to insert user input to database
-        DatabaseController.insertEvent(newEvent);
+        //Event newEvent = new Event(nameOfEventField.getText(),dateField.getText().toString(),placeField.getText(),contactPersonField.getText());
+        String eventName = nameOfEventField.getText();
+        String eventDate = dateField.getText().toString();
+        String eventPlace = placeField.getText();
+        String contactPerson = contactPersonField.getText();
+
+
+        //check if user input is valid
+        if(eventName.isEmpty() | eventDate.isEmpty() | eventPlace.isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Fehlermeldung");
+            alert.setHeaderText(null);
+            alert.setContentText("Leere Eingabe! Bitte füllen Sie alle Felder aus");
+            alert.showAndWait();
+        }try {
+            Event newEvent = new Event(eventName,eventDate,eventPlace,contactPerson);
+            newEvent.parse(eventDate);
+            DatabaseController.insertEvent(newEvent);
+            close.closeNewEventWindow();
+
+
+        }catch (RuntimeException  ex){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Fehlermeldung");
+            alert.setHeaderText(null);
+            alert.setContentText("Falsches Datum! Bitte halten Sie das vorgesehene Format ein");
+            alert.showAndWait();
+        }
     }
 
     //Button to close NewEventWindow
     public void closeNewEventButton(ActionEvent event5){
-    RootLayoutController close= new RootLayoutController();
+
     close.closeNewEventWindow();
 
 
     }
 
-    //close Window
-    public void closeWindow(){
+    //close Window used by ChoseCategoryController
+   public void closeWindow(){
         stage3.close();
     }
 

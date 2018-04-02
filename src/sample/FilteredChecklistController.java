@@ -1,5 +1,6 @@
 package sample;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -7,7 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.IntegerStringConverter;
-import sample.Article;
+
 
 import java.util.Collection;
 import java.util.Map;
@@ -23,6 +24,7 @@ public class FilteredChecklistController {
 
     @FXML
     private TableView<Article> articles;
+
 
 
 
@@ -57,6 +59,13 @@ public class FilteredChecklistController {
                DatabaseController.updateDB(result,uiArticle);
             }
         }
+
+    }
+
+
+    public void closeFilteredCategoryButton(ActionEvent event6){
+        ChoseCategoryController closeThisThing= new ChoseCategoryController();
+        closeThisThing.closeFilteredChecklistWindow();
 
     }
 
