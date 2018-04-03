@@ -102,7 +102,7 @@ public class FullCalendarView {
         // Change the title of the calendar
 
         SimpleDateFormat formatDateToGermany = new SimpleDateFormat( "LLLL, YY", Locale.GERMANY );
-        Date currentGermanyMonth = new Date(yearMonth.getYear(),yearMonth.getMonthValue(),0);
+        Date currentGermanyMonth = new Date(currentYearMonth.getYear(),yearMonth.getMonthValue(),0);
 
         calendarTitle.setText(formatDateToGermany.format(currentGermanyMonth));
 

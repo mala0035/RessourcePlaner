@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -35,6 +36,7 @@ public class NewEventController {
             Parent root3 = (Parent) fxmlLoader3.load();
             stage3.setTitle("Kategorien Wählen");
             stage3.setScene(new Scene(root3));
+            stage3.initModality(Modality.APPLICATION_MODAL);
             stage3.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -57,6 +59,7 @@ public class NewEventController {
             alert.setTitle("Fehlermeldung");
             alert.setHeaderText(null);
             alert.setContentText("Leere Eingabe! Bitte füllen Sie alle Felder aus");
+            alert.initModality(Modality.APPLICATION_MODAL);
             alert.showAndWait();
         }try {
             Event newEvent = new Event(eventName,eventDate,eventPlace,contactPerson);
@@ -70,6 +73,7 @@ public class NewEventController {
             alert.setTitle("Fehlermeldung");
             alert.setHeaderText(null);
             alert.setContentText("Falsches Datum! Bitte halten Sie das vorgesehene Format ein");
+            alert.initModality(Modality.APPLICATION_MODAL);
             alert.showAndWait();
         }
     }

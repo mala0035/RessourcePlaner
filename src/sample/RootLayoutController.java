@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.io.IOException;
 
@@ -23,6 +24,7 @@ public class RootLayoutController {
 
             stage1.setTitle("Neues Event");
             stage1.setScene(new Scene(root1));
+            stage1.initModality(Modality.APPLICATION_MODAL);
             stage1.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -38,6 +40,7 @@ public class RootLayoutController {
 
             stage2.setTitle("Kategorien Bearbeiten");
             stage2.setScene(new Scene(root2));
+            stage2.initModality(Modality.APPLICATION_MODAL);
             stage2.show();
         } catch (IOException e) {
             e.printStackTrace();

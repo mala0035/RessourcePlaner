@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.List;
@@ -42,6 +43,7 @@ public class ChoseCategoryController {
 
             stage4.setTitle("Gefilterte Checkliste");
             stage4.setScene(new Scene(root4));
+            stage4.initModality(Modality.APPLICATION_MODAL);
             stage4.show();
 
 
