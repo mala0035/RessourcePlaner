@@ -3,13 +3,16 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.stage.Modality;
 import javafx.util.converter.IntegerStringConverter;
 
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -25,8 +28,11 @@ public class FilteredChecklistController {
     @FXML
     private TableView<Article> articles;
 
-
-
+    private Map<Integer,Article> uiArticles;
+    private Collection<Article> dbArticles;
+    private Collection<FailResult> failResults;
+    private int result;
+    Article dbArticle = new Article(null,0,0);
 
 
     @FXML
@@ -45,21 +51,27 @@ public class FilteredChecklistController {
 
     @FXML
     private void save (){
-        Map<Integer,Article> uiArticles = this.articles.getItems().stream().collect(Collectors.toMap(articles -> articles.getId(), article -> article));
-        Collection<Article> dbArticles = DatabaseController.findBy(uiArticles.keySet());
+        uiArticles = this.articles.getItems().stream().collect(Collectors.toMap(articles -> articles.getId(), article -> article));
+        dbArticles = DatabaseController.findBy(uiArticles.keySet());
+        failResults = new ArrayList<>();
 
         for(Article articleRecord : dbArticles){
            Article uiArticle = uiArticles.get(articleRecord.getId());
+           dbArticle = new Article(articleRecord.getName(),articleRecord.getId(),articleRecord.getAmount());
 
-           int result = articleRecord.getAmount() - uiArticle.getAmount();
+           result = articleRecord.getAmount() - uiArticle.getAmount();
 
             if(result < 0){
-                throw new IllegalStateException("you can't pick more articles than available");
+                failResults.add(new FailResult(dbArticle, uiArticle.getAmount()));
             }else {
-               DatabaseController.updateDB(result,uiArticle);
+               articleRecord.setAmount(result);
             }
         }
-
+        if (failResults.isEmpty()) {
+            DatabaseController.updateDB(result, dbArticle); //result,uiArticles // muss noch geändert werden in ne zwischenvariable, die dann von event anlegen verwendet werden kann
+        }else{
+            showAlert(failResults);
+        }
     }
 
 
@@ -67,6 +79,17 @@ public class FilteredChecklistController {
         ChoseCategoryController closeThisThing= new ChoseCategoryController();
         closeThisThing.closeFilteredChecklistWindow();
 
+    }
+    private void showAlert(Collection<FailResult> failResults){
+        String printMessage = failResults.stream().map(FailResult::toString).collect(Collectors.joining(",\n"));
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setResizable(true);
+        alert.setTitle("Fehler beim Aktualisieren");
+        alert.setHeaderText("Die Aktualisierung der Datenbank ist fehlgeschlagen.");
+        alert.setContentText("Die Datenbank konnte nicht aktualisiert werden, " +
+                "da mehr Artikel ausgewählt wurden als vorhanden sind: \n\n" + printMessage);
+
+        alert.showAndWait();
     }
 
 
