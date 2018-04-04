@@ -21,9 +21,9 @@ public class ChoseCategoryController {
     @FXML private CheckBox musicCheckbox;
     @FXML private CheckBox servingCheckbox;
 
- private static Stage stage4 = new Stage();
+ public static Stage stage4 = new Stage();
 
-    //Button to close the ChoseCateroy Window
+    //Button to close the ChoseCategory Window
     public void cancelChoseCategoryButton(ActionEvent event) {
 
         NewEventController close = new NewEventController();
@@ -43,7 +43,6 @@ public class ChoseCategoryController {
 
             stage4.setTitle("Gefilterte Checkliste");
             stage4.setScene(new Scene(root4));
-            stage4.initModality(Modality.APPLICATION_MODAL);
             stage4.show();
 
 

@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,21 +17,24 @@ public class RootLayoutController {
     public static Stage stage2 = new Stage();
 
 
+
     //Open newEventWindow
     public void handleNewEventButton(ActionEvent event) {
+
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("NewEvent.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
 
             stage1.setTitle("Neues Event");
             stage1.setScene(new Scene(root1));
-            stage1.initModality(Modality.APPLICATION_MODAL);
             stage1.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+
     }
+
 
     //Open editChecklistWindow
     public void handleEditChecklistButton(ActionEvent event2) {
@@ -40,7 +44,6 @@ public class RootLayoutController {
 
             stage2.setTitle("Kategorien Bearbeiten");
             stage2.setScene(new Scene(root2));
-            stage2.initModality(Modality.APPLICATION_MODAL);
             stage2.show();
         } catch (IOException e) {
             e.printStackTrace();

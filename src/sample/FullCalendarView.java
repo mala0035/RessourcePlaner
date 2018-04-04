@@ -21,6 +21,7 @@ public class FullCalendarView {
     private LocalDate currentYearMonth;
     public HBox titleBar;
 
+
     /**
      * Create a calendar view
      * @param yearMonth year month to create the calendar of
@@ -71,7 +72,8 @@ public class FullCalendarView {
         // Populate calendar with the appropriate day numbers
         populateCalendar(yearMonth);
         // Create the calendar view
-        view = new VBox(dayLabels, calendar);
+        view = new VBox(dayLabels, calendar,titleBar);
+
 
 
     }
@@ -125,6 +127,7 @@ public class FullCalendarView {
     }
 
     public VBox getView() {
+
         return view;
     }
     public HBox getTitleBar() {

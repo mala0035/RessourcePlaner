@@ -26,7 +26,7 @@ public class NewEventController {
     @FXML
     private TextField contactPersonField;
 
-    private static Stage stage3 = new Stage();
+    public static Stage stage3 = new Stage();
     RootLayoutController close= new RootLayoutController();
 
     //Button to open ChoseCategory window
@@ -36,7 +36,6 @@ public class NewEventController {
             Parent root3 = (Parent) fxmlLoader3.load();
             stage3.setTitle("Kategorien Wählen");
             stage3.setScene(new Scene(root3));
-            stage3.initModality(Modality.APPLICATION_MODAL);
             stage3.show();
         } catch (IOException e) {
             e.printStackTrace();
