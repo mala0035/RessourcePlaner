@@ -28,12 +28,14 @@ public class FilteredChecklistController {
     @FXML
     private TableView<Article> articles;
 
-    private Map<Integer,Article> uiArticles;
+    private Map<Integer, Article> uiArticles;
     private Collection<Article> dbArticles;
     private Collection<FailResult> failResults;
     private int result;
-    Article dbArticle = new Article(null,0,0);
-
+    Article dbArticle = new Article(null, 0, 0);
+    Article uiArticle;
+    NewEventController callSetEvent = new NewEventController();
+    Article articleRecord;
 
     @FXML
     private void initialize() {
@@ -45,54 +47,57 @@ public class FilteredChecklistController {
                 (EventHandler<TableColumn.CellEditEvent<Article, Integer>>) editEvent -> editEvent.getTableView().getItems().get(editEvent.getTablePosition().getRow()).setAmount(editEvent.getNewValue()));
     }
 
-    public void setItems(ChoseCategoryController controller){
+    public void setItems(ChoseCategoryController controller) {
         articles.setItems(FXCollections.observableArrayList(DatabaseController.readCategory(controller.getSelectedCategories())));
     }
 
     @FXML
-    private void save (){
+    private void save() {
         uiArticles = this.articles.getItems().stream().collect(Collectors.toMap(articles -> articles.getId(), article -> article));
         dbArticles = DatabaseController.findBy(uiArticles.keySet());
         failResults = new ArrayList<>();
 
-        for(Article articleRecord : dbArticles){
-           Article uiArticle = uiArticles.get(articleRecord.getId());
-           dbArticle = new Article(articleRecord.getName(),articleRecord.getId(),articleRecord.getAmount());
+        for (Article articleRecord : dbArticles) {
+            uiArticle = uiArticles.get(articleRecord.getId());
+            dbArticle = new Article(articleRecord.getName(), articleRecord.getId(), articleRecord.getAmount());
 
-           result = articleRecord.getAmount() - uiArticle.getAmount();
+            result = articleRecord.getAmount() - uiArticle.getAmount();
 
-            if(result < 0){
+            if (result < 0) {
                 failResults.add(new FailResult(dbArticle, uiArticle.getAmount()));
+            } else {
+                articleRecord.setAmount(result);
+
+            }if (failResults.isEmpty()) {
+                DatabaseController.updateDB(result, uiArticle); //result,uiArticles //
+                callSetEvent.setEvent();
             }else {
-               articleRecord.setAmount(result);
-            }
+                showAlert(failResults);
+
         }
-        if (failResults.isEmpty()) {
-            DatabaseController.updateDB(result, dbArticle); //result,uiArticles // muss noch geändert werden in ne zwischenvariable, die dann von event anlegen verwendet werden kann
-        }else{
-            showAlert(failResults);
+
         }
     }
 
 
-    public void closeFilteredCategoryButton(ActionEvent event6){
-        ChoseCategoryController closeThisThing= new ChoseCategoryController();
-        closeThisThing.closeFilteredChecklistWindow();
+        public void closeFilteredCategoryButton (ActionEvent event6){
+            ChoseCategoryController closeThisThing = new ChoseCategoryController();
+            closeThisThing.closeFilteredChecklistWindow();
+
+        }
+        private void showAlert (Collection < FailResult > failResults) {
+            String printMessage = failResults.stream().map(FailResult::toString).collect(Collectors.joining(",\n"));
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setResizable(true);
+            alert.setTitle("Fehler beim Aktualisieren");
+            alert.setHeaderText("Die Aktualisierung der Datenbank ist fehlgeschlagen.");
+            alert.setContentText("Die Datenbank konnte nicht aktualisiert werden, " +
+                    "da mehr Artikel ausgewählt wurden als vorhanden sind: \n\n" + printMessage);
+
+            alert.showAndWait();
+        }
 
     }
-    private void showAlert(Collection<FailResult> failResults){
-        String printMessage = failResults.stream().map(FailResult::toString).collect(Collectors.joining(",\n"));
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setResizable(true);
-        alert.setTitle("Fehler beim Aktualisieren");
-        alert.setHeaderText("Die Aktualisierung der Datenbank ist fehlgeschlagen.");
-        alert.setContentText("Die Datenbank konnte nicht aktualisiert werden, " +
-                "da mehr Artikel ausgewählt wurden als vorhanden sind: \n\n" + printMessage);
 
-        alert.showAndWait();
-    }
-
-
-}
 
 

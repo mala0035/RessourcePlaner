@@ -1,5 +1,6 @@
 package sample;
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -118,5 +119,37 @@ public class DatabaseController {
         }
 
     }
+
+    public static void searchTodaysEvents(LocalDate date){
+        createDatabaseConnection();
+        Collection<Event> events = new ArrayList<>();
+        try {
+
+            Statement statement = databaseConnection.createStatement();
+
+            String findTodaysEvent =  "SELECT * FROM Event WHERE EventDate =('"+date+"')";
+
+            ResultSet resultSet = statement.executeQuery(findTodaysEvent);
+
+            while(resultSet.next()){
+
+                String name = resultSet.getString("EventName");
+                String eventDate = resultSet.getDate("EventDate").toString();
+                String place = resultSet.getString("Place");
+                String contactPerson = resultSet.getString("contactPerson");
+
+                System.out.println(name + ", " +eventDate + ", " + place + ", " + contactPerson);
+
+            Event event = new Event(name, eventDate, place, contactPerson);
+            events.add(event);
+
+            }
+
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        }
+
+    }
+
 }
 

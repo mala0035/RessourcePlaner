@@ -6,7 +6,7 @@ import java.util.Locale;
 
 public class Event {
 
-    private static final DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale.GERMANY);
+    private static final DateTimeFormatter FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.GERMANY );
 
     private final String name;
 
@@ -26,6 +26,8 @@ public class Event {
         this.contactPerson=contactPerson;
 
     }
+
+
 
     //parse the date
     public LocalDate parse (String dateToParse){
