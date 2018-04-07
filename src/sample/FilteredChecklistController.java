@@ -35,7 +35,7 @@ public class FilteredChecklistController {
     Article dbArticle = new Article(null, 0, 0);
     Article uiArticle;
     NewEventController callSetEvent = new NewEventController();
-    Article articleRecord;
+
 
     @FXML
     private void initialize() {
@@ -77,6 +77,7 @@ public class FilteredChecklistController {
         }
 
         }
+        ChoseCategoryController.stage4.close();
     }
 
 

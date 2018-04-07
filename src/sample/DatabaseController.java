@@ -16,52 +16,53 @@ public class DatabaseController {
     private static Connection databaseConnection;
 
 
-    private DatabaseController(){}
+    private DatabaseController() {
+    }
 
 
-     public static Collection<Article> readCategory(List<Categories> categoryList){
+    public static Collection<Article> readCategory(List<Categories> categoryList) {
         createDatabaseConnection();
         Collection<Article> articles = new ArrayList<>();
 
-       try {
+        try {
             Statement statement = databaseConnection.createStatement();
-           String collect = categoryList.stream().map(Categories::name).collect(Collectors.joining("','"));
-           String getCategory = "SELECT * FROM Storage WHERE Category IN ('"+collect+"')";
+            String collect = categoryList.stream().map(Categories::name).collect(Collectors.joining("','"));
+            String getCategory = "SELECT * FROM Storage WHERE Category IN ('" + collect + "')";
 
-           ResultSet categoryResult = statement.executeQuery(getCategory);
-            while(categoryResult.next()){
+            ResultSet categoryResult = statement.executeQuery(getCategory);
+            while (categoryResult.next()) {
                 String articleName = categoryResult.getString("ArticleName");
-                int storageId= categoryResult.getInt("StorageID");
-                articles.add(new Article(articleName,storageId,0));
+                int storageId = categoryResult.getInt("StorageID");
+                articles.add(new Article(articleName, storageId, 0));
 
             }
-        }catch(SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
         return articles;
     }
 
-    public static Collection<Article> findBy(Collection<Integer> ids){
+    public static Collection<Article> findBy(Collection<Integer> ids) {
         createDatabaseConnection();
         Collection<Article> articles = new ArrayList<>();
 
 
-        try{
+        try {
             Statement statement = databaseConnection.createStatement();
             String collect = ids.stream().map(id -> id.toString()).collect(Collectors.joining(","));
-            String getArticlesFromIds = "SELECT * FROM Storage WHERE StorageID IN ("+collect+")";
+            String getArticlesFromIds = "SELECT * FROM Storage WHERE StorageID IN (" + collect + ")";
 
             ResultSet resultSet = statement.executeQuery(getArticlesFromIds);
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 String articleName = resultSet.getString("ArticleName");
                 int id = resultSet.getInt("StorageID");
                 int articleAmount = resultSet.getInt("Amount");
-                Article article = new Article(articleName,id,articleAmount);
+                Article article = new Article(articleName, id, articleAmount);
                 articles.add(article);
 
             }
 
-        }catch (SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
         return articles;
@@ -69,27 +70,27 @@ public class DatabaseController {
 
 
     //put the Userinput into database
-    public static void insertEvent(Event event){
+    public static void insertEvent(Event event) {
         //Create connection to Database
         createDatabaseConnection();
 
         //Insert Userinput into Database
-        try{
+        try {
             Statement statement = databaseConnection.createStatement();
 
-            String sqlQuery = "INSERT INTO Event (EventName,EventDate,Place,ContactPerson) VALUES ('"+event.getName()+"','"+event.getDate().toString()+"','"+event.getPlace()+"','"+event.getContactPerson()+"')";
+            String sqlQuery = "INSERT INTO Event (EventName,EventDate,Place,ContactPerson) VALUES ('" + event.getName() + "','" + event.getDate().toString() + "','" + event.getPlace() + "','" + event.getContactPerson() + "')";
 
             statement.executeUpdate(sqlQuery);
-        }catch (SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
 
     }
 
     //check if there is already a connection. If it's not, create one
-    private static void createDatabaseConnection(){
+    private static void createDatabaseConnection() {
 
-        if(databaseConnection == null) {
+        if (databaseConnection == null) {
 
             try {
                 Class.forName(JDBC_DRIVER);
@@ -97,19 +98,19 @@ public class DatabaseController {
                 System.out.println("Baut Verbindung auf");
                 databaseConnection = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
 
-            } catch (ClassNotFoundException |SQLException ex) {
-                    ex.printStackTrace();
+            } catch (ClassNotFoundException | SQLException ex) {
+                ex.printStackTrace();
 
 
             }
         }
     }
 
-    public static void updateDB (int value, Article article) {
+    public static void updateDB(int value, Article article) {
         try {
             Statement statement = databaseConnection.createStatement();
 
-            String update = "UPDATE Storage SET Amount = "+value+" WHERE StorageID = "+article.getId()+" ";
+            String update = "UPDATE Storage SET Amount = " + value + " WHERE StorageID = " + article.getId() + " ";
 
 
             statement.executeUpdate(update);
@@ -120,36 +121,37 @@ public class DatabaseController {
 
     }
 
-    public static void searchTodaysEvents(LocalDate date){
+    public static Collection<Event> searchTodaysEvents(LocalDate date) {
         createDatabaseConnection();
         Collection<Event> events = new ArrayList<>();
         try {
 
             Statement statement = databaseConnection.createStatement();
 
-            String findTodaysEvent =  "SELECT * FROM Event WHERE EventDate =('"+date+"')";
+            String findTodaysEvent = "SELECT * FROM Event WHERE EventDate =('" + date + "')";
 
             ResultSet resultSet = statement.executeQuery(findTodaysEvent);
 
-            while(resultSet.next()){
+            while (resultSet.next()) {
 
                 String name = resultSet.getString("EventName");
                 String eventDate = resultSet.getDate("EventDate").toString();
                 String place = resultSet.getString("Place");
                 String contactPerson = resultSet.getString("contactPerson");
 
-                System.out.println(name + ", " +eventDate + ", " + place + ", " + contactPerson);
+                System.out.println(name + ", " + eventDate + ", " + place + ", " + contactPerson);
 
-            Event event = new Event(name, eventDate, place, contactPerson);
-            events.add(event);
-
+                Event event = new Event(name, eventDate, place, contactPerson);
+                events.add(event);
+                return events;
             }
 
-        }catch (SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
-
+        return null;
     }
-
 }
+
+
 

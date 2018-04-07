@@ -69,7 +69,7 @@ public class NewEventController {
             newEvent = new Event(eventName,eventDate,eventPlace,contactPerson);
             newEvent.parse(eventDate);
             //DatabaseController.insertEvent(newEvent); // muss weg und ans Ende das FilteredChecklistController, stattdessen soll hier das Fenster für die choseCategory aufgehen
-            close.closeNewEventWindow();
+            RootLayoutController.stage1.close();
             openChoseCategoryWindow();
 
         }catch (RuntimeException  ex){
@@ -84,8 +84,7 @@ public class NewEventController {
 
     //Button to close NewEventWindow
     public void closeNewEventButton(ActionEvent event5){
-
-    close.closeNewEventWindow();
+    RootLayoutController.stage1.close();
 
 
     }
@@ -95,9 +94,7 @@ public class NewEventController {
     }
 
     //close Window used by ChoseCategoryController
-   public void closeWindow(){
-        stage3.close();
-    }
+
 
     public void getNewEvent(Event event){
         this.newEvent = event;

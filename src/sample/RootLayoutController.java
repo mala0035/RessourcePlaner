@@ -34,28 +34,6 @@ public class RootLayoutController {
 
 
     }
-
-
-    //Open editChecklistWindow
-    public void handleEditChecklistButton(ActionEvent event2) {
-        try {
-            FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("ChecklistEdit.fxml"));
-            Parent root2 = (Parent) fxmlLoader2.load();
-
-            stage2.setTitle("Kategorien Bearbeiten");
-            stage2.setScene(new Scene(root2));
-            stage2.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    //Close newEventWindow
-    public void closeNewEventWindow(){
-        stage1.close();
-
-    }
-
 }
+
 

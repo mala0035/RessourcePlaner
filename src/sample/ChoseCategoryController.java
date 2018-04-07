@@ -26,8 +26,7 @@ public class ChoseCategoryController {
     //Button to close the ChoseCategory Window
     public void cancelChoseCategoryButton(ActionEvent event) {
 
-        NewEventController close = new NewEventController();
-        close.closeWindow();
+       NewEventController.stage3.close();
 
     }
 
