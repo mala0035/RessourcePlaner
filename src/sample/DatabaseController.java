@@ -109,20 +109,6 @@ public class DatabaseController {
         }
     }
 
-    public static void updateDB(int value, Article article) {
-        try {
-            Statement statement = databaseConnection.createStatement();
-
-            String update = "UPDATE Storage SET Amount = " + value + " WHERE StorageID = " + article.getId() + " ";
-
-
-            statement.executeUpdate(update);
-
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-
-    }
 
     public static Collection<Event> searchTodaysEvents(LocalDate date) {
         createDatabaseConnection();
@@ -131,7 +117,7 @@ public class DatabaseController {
 
             Statement statement = databaseConnection.createStatement();
 
-            String findTodaysEvent = "SELECT * FROM Event WHERE EventDate =('" + date + "')";
+            String findTodaysEvent = "SELECT * FROM Event WHERE EventDate = '" + date + "'";
 
             ResultSet resultSet = statement.executeQuery(findTodaysEvent);
 
@@ -141,10 +127,12 @@ public class DatabaseController {
                 String eventDate = resultSet.getDate("EventDate").toString();
                 String place = resultSet.getString("Place");
                 String contactPerson = resultSet.getString("contactPerson");
+                String id = resultSet.getString("id");
+
 
                 System.out.println(name + ", " + eventDate + ", " + place + ", " + contactPerson);
 
-                Event event = new Event(name, eventDate, place, contactPerson);
+                Event event = new Event(id, name, eventDate, place, contactPerson);
                 events.add(event);
 
             }
@@ -160,7 +148,7 @@ public class DatabaseController {
         createDatabaseConnection();
        Collection<EventArticle> eventArticles = new ArrayList<>();
 
-        String eventIds = ids.stream().collect(Collectors.joining(","));
+        String eventIds = ids.stream().collect(Collectors.joining("','"));
 
         try {
             Statement statement = databaseConnection.createStatement();

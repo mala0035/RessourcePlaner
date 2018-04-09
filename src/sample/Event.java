@@ -29,6 +29,14 @@ public class Event {
         this.id = UUID.randomUUID().toString();
     }
 
+    public Event(String id, String name, String date, String place, String contactPerson){
+        this.id = id;
+        this.date= parse(date);
+        this.name = name;
+        this.place = place;
+        this.contactPerson = contactPerson;
+    }
+
 
 
     //parse the date

@@ -84,24 +84,21 @@ public class FilteredChecklistController {
                 } else{
                     failResults.add(new FailResult(uiArticle.getName(),availableArticleAmount,uiArticle.getAmount()));
                 }
-
             }
-            if(failResults.isEmpty()){
-                DatabaseController.insertEvent(event);
-                DatabaseController.insertConnectionToEventArticleTable(eventArticles);
-            }
-
-
 
         }
+        if(failResults.isEmpty()){
+            DatabaseController.insertEvent(event);
+            DatabaseController.insertConnectionToEventArticleTable(eventArticles);
 
-
+        }else{showAlert(failResults);}
+        ChoseCategoryController.stage4.close();
     }
 
 
         public void closeFilteredCategoryButton (ActionEvent event6){
-            ChoseCategoryController closeThisThing = new ChoseCategoryController();
-            closeThisThing.closeFilteredChecklistWindow();
+
+            ChoseCategoryController.stage4.close();
 
         }
         private void showAlert (Collection < FailResult > failResults) {
