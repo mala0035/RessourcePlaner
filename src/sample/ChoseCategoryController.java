@@ -21,6 +21,9 @@ public class ChoseCategoryController {
     @FXML private CheckBox musicCheckbox;
     @FXML private CheckBox servingCheckbox;
 
+    private Event event;
+
+
  public static Stage stage4 = new Stage();
 
     //Button to close the ChoseCategory Window
@@ -50,6 +53,15 @@ public class ChoseCategoryController {
             e.printStackTrace();
         }
     }
+
+    public Event getEvent(){
+        return event;
+    }
+
+    public void setEvent(Event thisEvent){
+        event = thisEvent;
+    }
+
 
     List<Categories> getSelectedCategories() {
         return Stream.of(servingCheckbox, musicCheckbox,merchandiseCheckbox,othersCheckbox,standardCheckbox)

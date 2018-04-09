@@ -24,10 +24,10 @@ public class TodaysEventController {
     @FXML
     public void initialize() {
         events.setEditable(true);
-        eventNameColumn.setCellValueFactory(new PropertyValueFactory<>("EventName"));
-        eventDateColumn.setCellValueFactory(new PropertyValueFactory<>("EventDate"));
-        eventPlaceColumn.setCellValueFactory(new PropertyValueFactory<>("Place"));
-        contactPersonColumn.setCellValueFactory(new PropertyValueFactory<>("ContactPerson"));
+        eventNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        eventDateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+        eventPlaceColumn.setCellValueFactory(new PropertyValueFactory<>("place"));
+        contactPersonColumn.setCellValueFactory(new PropertyValueFactory<>("contactPerson"));
     }
 
 

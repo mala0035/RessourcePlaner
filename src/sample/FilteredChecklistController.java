@@ -1,5 +1,6 @@
 package sample;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -14,7 +15,9 @@ import javafx.util.converter.IntegerStringConverter;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class FilteredChecklistController {
@@ -28,13 +31,9 @@ public class FilteredChecklistController {
     @FXML
     private TableView<Article> articles;
 
-    private Map<Integer, Article> uiArticles;
-    private Collection<Article> dbArticles;
-    private Collection<FailResult> failResults;
-    private int result;
-    Article dbArticle = new Article(null, 0, 0);
-    Article uiArticle;
-    NewEventController callSetEvent = new NewEventController();
+    private Event event;
+
+
 
 
     @FXML
@@ -49,35 +48,54 @@ public class FilteredChecklistController {
 
     public void setItems(ChoseCategoryController controller) {
         articles.setItems(FXCollections.observableArrayList(DatabaseController.readCategory(controller.getSelectedCategories())));
+        event = controller.getEvent();
     }
 
     @FXML
     private void save() {
-        uiArticles = this.articles.getItems().stream().collect(Collectors.toMap(articles -> articles.getId(), article -> article));
-        dbArticles = DatabaseController.findBy(uiArticles.keySet());
-        failResults = new ArrayList<>();
+        ObservableList<Article> uiArticles = articles.getItems();
+        Collection<Event> todaysEvents = DatabaseController.searchTodaysEvents(event.getDate());
 
-        for (Article articleRecord : dbArticles) {
-            uiArticle = uiArticles.get(articleRecord.getId());
-            dbArticle = new Article(articleRecord.getName(), articleRecord.getId(), articleRecord.getAmount());
+        Collection<EventArticle> alreadyBlockedArticlesForEvents = DatabaseController.loadBy(todaysEvents.stream().map(Event::getId).collect(Collectors.toList()));
+        Collection<Article> alreadyUsedArticles = DatabaseController.findBy(alreadyBlockedArticlesForEvents.stream().map(EventArticle::getArticleId).collect(Collectors.toList()));
 
-            result = articleRecord.getAmount() - uiArticle.getAmount();
+        Collection<Article> dbArticlesForGivenArticleNrs = DatabaseController.getBy(uiArticles.stream().map(Article::getArticleNr).collect(Collectors.toList()));
+        Collection<EventArticle> eventArticles = new ArrayList<>();
 
-            if (result < 0) {
-                failResults.add(new FailResult(dbArticle, uiArticle.getAmount()));
-            } else {
-                articleRecord.setAmount(result);
+        Collection<FailResult> failResults = new ArrayList<>();
 
-            }if (failResults.isEmpty()) {
-                DatabaseController.updateDB(result, uiArticle); //result,uiArticles //
-                callSetEvent.setEvent();
-            }else {
-                showAlert(failResults);
+        for(Article uiArticle : uiArticles){
+
+            if(uiArticle.getAmount() > 0){
+
+                long countAllArticlesForArticleNr = dbArticlesForGivenArticleNrs.stream().filter(article -> article.getArticleNr().equals(uiArticle.getArticleNr())).count();
+                long countAlreadyUsedArticlesForArticleNr = alreadyUsedArticles.stream().filter(article -> article.getArticleNr().equals(uiArticle.getArticleNr())).count();
+
+                long availableArticleAmount = countAllArticlesForArticleNr - countAlreadyUsedArticlesForArticleNr;
+                boolean moreArticlesAvailableThanPicked = countAllArticlesForArticleNr - countAlreadyUsedArticlesForArticleNr - uiArticle.getAmount() >= 0;
+
+
+                if(moreArticlesAvailableThanPicked){
+                dbArticlesForGivenArticleNrs.stream()
+                        .filter(article -> article.getArticleNr().equals(uiArticle.getArticleNr()))
+                        .limit(uiArticle.getAmount())
+                        .forEach(art -> eventArticles.add(new EventArticle(art.getId(),event.getId())) );
+
+                } else{
+                    failResults.add(new FailResult(uiArticle.getName(),availableArticleAmount,uiArticle.getAmount()));
+                }
+
+            }
+            if(failResults.isEmpty()){
+                DatabaseController.insertEvent(event);
+                DatabaseController.insertConnectionToEventArticleTable(eventArticles);
+            }
+
+
 
         }
 
-        }
-        ChoseCategoryController.stage4.close();
+
     }
 
 

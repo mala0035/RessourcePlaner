@@ -2,6 +2,7 @@ package sample;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import java.util.UUID;
 
 
 public class Event {
@@ -16,6 +17,7 @@ public class Event {
 
     private final String contactPerson;
 
+    private final String id;
 
 
     //Constructor
@@ -24,7 +26,7 @@ public class Event {
         this.date=parse(date);
         this.place=place;
         this.contactPerson=contactPerson;
-
+        this.id = UUID.randomUUID().toString();
     }
 
 
@@ -54,7 +56,9 @@ public class Event {
     }
 
 
-
+    public String getId (){
+        return id;
+    }
 
 
 }

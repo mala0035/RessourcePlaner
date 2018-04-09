@@ -28,16 +28,18 @@ public class NewEventController {
 
     public static Stage stage3 = new Stage();
     RootLayoutController close= new RootLayoutController();
-    public static Event newEvent;
 
 
 
 
     //Button to open ChoseCategory window
-    public void openChoseCategoryWindow() {
+    public void openChoseCategoryWindow(Event event) {
         try {
             FXMLLoader fxmlLoader3 = new FXMLLoader(getClass().getResource("ChoseCategory.fxml"));
             Parent root3 = (Parent) fxmlLoader3.load();
+            ChoseCategoryController controller = fxmlLoader3.getController();
+            controller.setEvent(event);
+
             stage3.setTitle("Kategorien Wählen");
             stage3.setScene(new Scene(root3));
             stage3.show();
@@ -66,11 +68,11 @@ public class NewEventController {
             alert.initModality(Modality.APPLICATION_MODAL);
             alert.showAndWait();
         }try {
-            newEvent = new Event(eventName,eventDate,eventPlace,contactPerson);
+           Event newEvent = new Event(eventName,eventDate,eventPlace,contactPerson);
             newEvent.parse(eventDate);
             //DatabaseController.insertEvent(newEvent); // muss weg und ans Ende das FilteredChecklistController, stattdessen soll hier das Fenster für die choseCategory aufgehen
             RootLayoutController.stage1.close();
-            openChoseCategoryWindow();
+            openChoseCategoryWindow(newEvent);
 
         }catch (RuntimeException  ex){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -87,16 +89,5 @@ public class NewEventController {
     RootLayoutController.stage1.close();
 
 
-    }
-
-    public void setEvent(){
-        DatabaseController.insertEvent(newEvent);
-    }
-
-    //close Window used by ChoseCategoryController
-
-
-    public void getNewEvent(Event event){
-        this.newEvent = event;
     }
 }

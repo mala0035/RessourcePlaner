@@ -8,6 +8,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
@@ -103,9 +104,10 @@ public class FullCalendarView {
         }
         // Change the title of the calendar
 
-        SimpleDateFormat formatDateToGermany = new SimpleDateFormat( "LLLL, YY", Locale.GERMANY );
-        Date currentGermanyMonth = new Date(currentYearMonth.getYear(),yearMonth.getMonthValue(),0);
-
+       // SimpleDateFormat formatDateToGermany = new SimpleDateFormat( "LLLL, YY", Locale.GERMANY );
+       // Date currentGermanyMonth = new Date(currentYearMonth.getYear(),yearMonth.getMonthValue(),0);
+        DateTimeFormatter formatDateToGermany = DateTimeFormatter.ofPattern("MMMM-yyyy", Locale.GERMANY);
+        LocalDate currentGermanyMonth = LocalDate.of(currentYearMonth.getYear(),yearMonth.getMonthValue(),currentYearMonth.getDayOfMonth());
         calendarTitle.setText(formatDateToGermany.format(currentGermanyMonth));
 
     }
