@@ -15,21 +15,26 @@ import java.util.stream.Stream;
 
 public class ChoseCategoryController {
 
-    @FXML private CheckBox standardCheckbox;
-    @FXML private CheckBox othersCheckbox;
-    @FXML private CheckBox merchandiseCheckbox;
-    @FXML private CheckBox musicCheckbox;
-    @FXML private CheckBox servingCheckbox;
+    @FXML
+    private CheckBox standardCheckbox;
+    @FXML
+    private CheckBox othersCheckbox;
+    @FXML
+    private CheckBox merchandiseCheckbox;
+    @FXML
+    private CheckBox musicCheckbox;
+    @FXML
+    private CheckBox servingCheckbox;
 
     private Event event;
 
 
- public static Stage stage4 = new Stage();
+    public static Stage stage3 = new Stage();
 
     //Button to close the ChoseCategory Window
     public void cancelChoseCategoryButton(ActionEvent event) {
 
-       NewEventController.stage3.close();
+        NewEventController.stage2.close();
 
     }
 
@@ -43,10 +48,9 @@ public class ChoseCategoryController {
             FilteredChecklistController fcController = fxmlLoader3.getController();
             fcController.setItems(this);
 
-            stage4.setTitle("Gefilterte Checkliste");
-            stage4.setScene(new Scene(root4));
-            stage4.show();
-
+            stage3.setTitle("Gefilterte Checkliste");
+            stage3.setScene(new Scene(root4));
+            stage3.show();
 
 
         } catch (IOException e) {
@@ -54,26 +58,21 @@ public class ChoseCategoryController {
         }
     }
 
-    public Event getEvent(){
+    public Event getEvent() {
         return event;
     }
 
-    public void setEvent(Event thisEvent){
+    public void setEvent(Event thisEvent) {
         event = thisEvent;
     }
 
 
     List<Categories> getSelectedCategories() {
-        return Stream.of(servingCheckbox, musicCheckbox,merchandiseCheckbox,othersCheckbox,standardCheckbox)
+        return Stream.of(servingCheckbox, musicCheckbox, merchandiseCheckbox, othersCheckbox, standardCheckbox)
                 .filter(CheckBox::isSelected)
                 .map(CheckBox::getText)
                 .map(String::toUpperCase)
                 .map(Categories::valueOf)
                 .collect(Collectors.toList());
     }
-
-    public void closeFilteredChecklistWindow(){
-        stage4.close();
-    }
-
 }

@@ -49,9 +49,8 @@ public class Main extends Application {
     }
     private void setModality() {
         RootLayoutController.stage1.initModality(Modality.APPLICATION_MODAL);
-        RootLayoutController.stage2.initModality(Modality.APPLICATION_MODAL);
-        NewEventController.stage3.initModality(Modality.APPLICATION_MODAL);
-        ChoseCategoryController.stage4.initModality(Modality.APPLICATION_MODAL);
+        NewEventController.stage2.initModality(Modality.APPLICATION_MODAL);
+        ChoseCategoryController.stage3.initModality(Modality.APPLICATION_MODAL);
 
     }
 }

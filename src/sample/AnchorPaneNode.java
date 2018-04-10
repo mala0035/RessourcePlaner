@@ -27,10 +27,7 @@ import java.util.stream.Stream;
  */
 public class AnchorPaneNode extends AnchorPane {
 
-    public static Stage stage5 = new Stage();
-
-
-
+    public static Stage stage4 = new Stage();
     // Date associated with this pane
     private LocalDate date;
 
@@ -52,21 +49,15 @@ public class AnchorPaneNode extends AnchorPane {
             TodaysEventController fcController = fxmlLoader4.getController();
             fcController.setEvents(this);
 
-            stage5.setTitle("Events");
-            stage5.setScene(new Scene(root5));
-            stage5.show();
-
+            stage4.setTitle("Events");
+            stage4.setScene(new Scene(root5));
+            stage4.show();
 
             DatabaseController.searchTodaysEvents(date);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public void kA(){
-        DatabaseController.searchTodaysEvents(date);
-
     }
 
     public LocalDate getDate() {
@@ -78,7 +69,7 @@ public class AnchorPaneNode extends AnchorPane {
     }
 
     Collection<Event> getTodaysEvents() {
-        Collection<Event> bla = DatabaseController.searchTodaysEvents(date);
-        return bla;
+        Collection<Event> todaysEvents = DatabaseController.searchTodaysEvents(date);
+        return todaysEvents;
     }
 }

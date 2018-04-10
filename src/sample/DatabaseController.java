@@ -15,11 +15,31 @@ public class DatabaseController {
     private static final String PASSWORD = "root";
     private static Connection databaseConnection;
 
-
+    //constructor
     private DatabaseController() {
     }
 
+    //check if there is already a connection. If it's not, create one
+    private static void createDatabaseConnection() {
 
+        if (databaseConnection == null) {
+
+            try {
+                Class.forName(JDBC_DRIVER);
+
+                System.out.println("Baut Verbindung auf");
+                databaseConnection = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
+
+            } catch (ClassNotFoundException | SQLException ex) {
+                ex.printStackTrace();
+
+
+            }
+        }
+    }
+
+
+    //Query to collect all Articles from selected Categorys
     public static Collection<Article> readCategory(List<Categories> categoryList) {
         createDatabaseConnection();
         Collection<Article> articles = new ArrayList<>();
@@ -43,7 +63,7 @@ public class DatabaseController {
         }
         return articles;
     }
-
+    //Query to search Articles by ID
     public static Collection<Article> findBy(Collection<Integer> ids) {
         createDatabaseConnection();
         Collection<Article> articles = new ArrayList<>();
@@ -72,12 +92,10 @@ public class DatabaseController {
     }
 
 
-    //put the Userinput into database
+    //Query to put the Userinput into database
     public static void insertEvent(Event event) {
-        //Create connection to Database
         createDatabaseConnection();
 
-        //Insert Userinput into Database
         try {
             Statement statement = databaseConnection.createStatement();
 
@@ -90,26 +108,8 @@ public class DatabaseController {
 
     }
 
-    //check if there is already a connection. If it's not, create one
-    private static void createDatabaseConnection() {
 
-        if (databaseConnection == null) {
-
-            try {
-                Class.forName(JDBC_DRIVER);
-
-                System.out.println("Baut Verbindung auf");
-                databaseConnection = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
-
-            } catch (ClassNotFoundException | SQLException ex) {
-                ex.printStackTrace();
-
-
-            }
-        }
-    }
-
-
+    //Query to search the Event on a given date
     public static Collection<Event> searchTodaysEvents(LocalDate date) {
         createDatabaseConnection();
         Collection<Event> events = new ArrayList<>();
@@ -129,9 +129,6 @@ public class DatabaseController {
                 String contactPerson = resultSet.getString("contactPerson");
                 String id = resultSet.getString("id");
 
-
-                System.out.println(name + ", " + eventDate + ", " + place + ", " + contactPerson);
-
                 Event event = new Event(id, name, eventDate, place, contactPerson);
                 events.add(event);
 
@@ -143,7 +140,7 @@ public class DatabaseController {
         return events;
     }
 
-
+    //Query to load Article ID and EventID  by Event ID
     public static Collection<EventArticle> loadBy (Collection<String> ids){
         createDatabaseConnection();
        Collection<EventArticle> eventArticles = new ArrayList<>();
@@ -169,6 +166,7 @@ public class DatabaseController {
         }return eventArticles;
     }
 
+    //search equal Article IDs
     public static Collection<Article> getBy(Collection<String> articleNrs){
         createDatabaseConnection();
         Collection<Article> articles = new ArrayList<>();
@@ -203,6 +201,7 @@ public class DatabaseController {
         return articles;
     }
 
+    //Query to insert the connection between Article ID and Event ID
     public static void insertConnectionToEventArticleTable (Collection<EventArticle> eventArticles){
         createDatabaseConnection();
 

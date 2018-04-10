@@ -26,8 +26,7 @@ public class NewEventController {
     @FXML
     private TextField contactPersonField;
 
-    public static Stage stage3 = new Stage();
-    RootLayoutController close= new RootLayoutController();
+    public static Stage stage2 = new Stage();
 
 
 
@@ -40,9 +39,9 @@ public class NewEventController {
             ChoseCategoryController controller = fxmlLoader3.getController();
             controller.setEvent(event);
 
-            stage3.setTitle("Kategorien Wählen");
-            stage3.setScene(new Scene(root3));
-            stage3.show();
+            stage2.setTitle("Kategorien Wählen");
+            stage2.setScene(new Scene(root3));
+            stage2.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,8 +69,6 @@ public class NewEventController {
         }try {
            Event newEvent = new Event(eventName,eventDate,eventPlace,contactPerson);
             newEvent.parse(eventDate);
-            //DatabaseController.insertEvent(newEvent); // muss weg und ans Ende das FilteredChecklistController, stattdessen soll hier das Fenster für die choseCategory aufgehen
-            RootLayoutController.stage1.close();
             openChoseCategoryWindow(newEvent);
 
         }catch (RuntimeException  ex){

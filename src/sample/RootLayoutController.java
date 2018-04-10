@@ -14,9 +14,6 @@ import java.io.IOException;
 public class RootLayoutController {
 
     public static Stage stage1 = new Stage();
-    public static Stage stage2 = new Stage();
-
-
 
     //Open newEventWindow
     public void handleNewEventButton(ActionEvent event) {

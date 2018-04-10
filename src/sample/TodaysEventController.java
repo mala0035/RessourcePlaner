@@ -29,7 +29,7 @@ public class TodaysEventController extends AnchorPane {
     private TableColumn needArticles;
     @FXML
     private ListView<ArticleAmount> articlesTable;
-    
+
 
     @FXML
     public void initialize() {
@@ -44,7 +44,7 @@ public class TodaysEventController extends AnchorPane {
 
     @FXML
     private void handleOKButton() {
-        AnchorPaneNode.stage5.close();
+        AnchorPaneNode.stage4.close();
     }
 
     public void setEvents(AnchorPaneNode controller) {

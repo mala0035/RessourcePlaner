@@ -35,7 +35,7 @@ public class FilteredChecklistController {
 
 
 
-
+    //set column values and make the TableView editable
     @FXML
     private void initialize() {
         articles.setEditable(true);
@@ -46,11 +46,16 @@ public class FilteredChecklistController {
                 (EventHandler<TableColumn.CellEditEvent<Article, Integer>>) editEvent -> editEvent.getTableView().getItems().get(editEvent.getTablePosition().getRow()).setAmount(editEvent.getNewValue()));
     }
 
+
+    // set events into cells
     public void setItems(ChoseCategoryController controller) {
         articles.setItems(FXCollections.observableArrayList(DatabaseController.readCategory(controller.getSelectedCategories())));
         event = controller.getEvent();
     }
 
+
+    //check how much articles are already used at the given events day. If there is enough articles available insert the event and the connection betwen Article ID and Event ID.
+    //If there are not enough articles available show alert window and don't insert the event and the Article ID - Event ID connection as well
     @FXML
     private void save() {
         ObservableList<Article> uiArticles = articles.getItems();
@@ -90,17 +95,21 @@ public class FilteredChecklistController {
         if(failResults.isEmpty()){
             DatabaseController.insertEvent(event);
             DatabaseController.insertConnectionToEventArticleTable(eventArticles);
-
+            successfulyDoneWindow();
+            ChoseCategoryController.stage3.close();
+            NewEventController.stage2.close();
+            RootLayoutController.stage1.close();
         }else{showAlert(failResults);}
-        ChoseCategoryController.stage4.close();
     }
 
-
+        //if close button was clicked close the stage
         public void closeFilteredCategoryButton (ActionEvent event6){
 
-            ChoseCategoryController.stage4.close();
+            ChoseCategoryController.stage3.close();
 
         }
+
+        //opens alert window with the articles which are not available
         private void showAlert (Collection < FailResult > failResults) {
             String printMessage = failResults.stream().map(FailResult::toString).collect(Collectors.joining(",\n"));
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -110,6 +119,15 @@ public class FilteredChecklistController {
             alert.setContentText("Die Datenbank konnte nicht aktualisiert werden, " +
                     "da mehr Artikel ausgewählt wurden als vorhanden sind: \n\n" + printMessage);
 
+            alert.showAndWait();
+        }
+
+        private void successfulyDoneWindow(){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Event angelegt!");
+            alert.setHeaderText(null);
+            alert.setContentText("Das Event wurde Erfolgreich angelegt!");
+            alert.initModality(Modality.APPLICATION_MODAL);
             alert.showAndWait();
         }
 
