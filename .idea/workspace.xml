@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/FilteredChecklistController.class" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/FilteredChecklistController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/DatabaseController.class" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/DatabaseController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/TodaysEvent.fxml" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/TodaysEvent.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Article.java" afterPath="$PROJECT_DIR$/src/sample/Article.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/DatabaseController.java" afterPath="$PROJECT_DIR$/src/sample/DatabaseController.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Event.java" afterPath="$PROJECT_DIR$/src/sample/Event.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FilteredChecklistController.java" afterPath="$PROJECT_DIR$/src/sample/FilteredChecklistController.java" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FullCalendarView.java" afterPath="$PROJECT_DIR$/src/sample/FullCalendarView.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/TodaysEvent.fxml" afterPath="$PROJECT_DIR$/src/sample/TodaysEvent.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/sample/TodaysEventController.java" afterPath="$PROJECT_DIR$/src/sample/TodaysEventController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,41 +78,69 @@
       <file leaf-file-name="FilteredChecklistController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/FilteredChecklistController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+            <state relative-caret-position="629">
+              <caret line="56" column="96" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="96" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TodaysEvent.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TodaysEvent.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/TodaysEvent.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="169" lean-forward="false" selection-start-line="8" selection-start-column="169" selection-end-line="8" selection-end-column="169" />
+        </entry>
+      </file>
+      <file leaf-file-name="TodaysEventController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/TodaysEventController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="e#1435#1436#0" expanded="true" />
+                <element signature="e#1480#1481#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FullCalendarView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/FullCalendarView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="107" column="52" lean-forward="true" selection-start-line="107" selection-start-column="52" selection-end-line="107" selection-end-column="52" />
+              <folding>
+                <element signature="e#5153#5154#0" expanded="true" />
+                <element signature="e#5184#5185#0" expanded="true" />
+                <element signature="e#5247#5248#0" expanded="true" />
+                <element signature="e#5285#5286#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleAmount.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/ArticleAmount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FXMLLoader.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <file leaf-file-name="ChoseCategoryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/ChoseCategoryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="1770" column="0" lean-forward="false" selection-start-line="1770" selection-start-column="0" selection-end-line="1770" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FailResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/FailResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="95" lean-forward="false" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
+            <state relative-caret-position="765">
+              <caret line="57" column="21" lean-forward="false" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -119,82 +149,8 @@
       <file leaf-file-name="AnchorPaneNode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/AnchorPaneNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-              <folding>
-                <element signature="e#1986#1987#0" expanded="true" />
-                <element signature="e#2013#2014#0" expanded="true" />
-                <element signature="e#2056#2057#0" expanded="true" />
-                <element signature="e#2088#2089#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewEventController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/NewEventController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Event.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-              <folding>
-                <element signature="e#1388#1389#0" expanded="true" />
-                <element signature="e#1413#1414#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/DatabaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
-              <folding>
-                <marker date="1523301901362" expanded="true" signature="1011:1070" ph="SELECT * FRO... Storage" />
-                <marker date="1523301901362" expanded="true" signature="1011:1079" ph="SELECT * FRO... Storage" />
-                <marker date="1523301901362" expanded="true" signature="1011:1089" ph="SELECT * FRO... Storage" />
-                <marker date="1523301901362" expanded="true" signature="2035:2094" ph="SELECT * FRO... Storage" />
-                <marker date="1523301901362" expanded="true" signature="2980:3159" ph="INSERT INTO Event... " />
-                <marker date="1523301901362" expanded="true" signature="2980:3192" ph="INSERT INTO Event... " />
-                <marker date="1523301901362" expanded="true" signature="2980:3194" ph="INSERT INTO Event... " />
-                <marker date="1523301901362" expanded="true" signature="4144:4169" ph="SELECT * FRO... Event" />
-                <marker date="1523301901362" expanded="true" signature="4144:4170" ph="SELECT * FRO... Event" />
-                <marker date="1523301901362" expanded="true" signature="4144:4181" ph="SELECT Event... Event" />
-                <marker date="1523301901362" expanded="true" signature="4144:4193" ph="SELECT * FRO... Event" />
-                <marker date="1523301901362" expanded="true" signature="4144:4196" ph="SELECT * FRO... Event" />
-                <marker date="1523301901362" expanded="true" signature="4144:4197" ph="SELECT Event... Event" />
-                <marker date="1523301901362" expanded="true" signature="5373:5420" ph="SELECT * FRO... Event_Article" />
-                <marker date="1523301901362" expanded="true" signature="5373:5433" ph="SELECT * FRO... Event_Article" />
-                <marker date="1523301901362" expanded="true" signature="5373:5434" ph="SELECT * FRO... Event_Article" />
-                <marker date="1523301901362" expanded="true" signature="6244:6281" ph="SELECT * FRO... Storage" />
-                <marker date="1523301901362" expanded="true" signature="6244:6284" ph="SELECT * FRO... Storage" />
-                <marker date="1523301901362" expanded="true" signature="6244:6285" ph="SELECT * FRO... Storage" />
-                <marker date="1523301901362" expanded="true" signature="6244:6286" ph="SELECT * FRO... Storage" />
-                <marker date="1523301901362" expanded="true" signature="6244:6300" ph="SELECT * FRO... Storage" />
-                <marker date="1523301901362" expanded="true" signature="7175:7260" ph="INSERT INTO event_article... " />
-                <marker date="1523301901362" expanded="true" signature="7175:7262" ph="INSERT INTO event_article... " />
-                <marker date="1523301901362" expanded="true" signature="7175:7283" ph="INSERT INTO event_article... " />
-                <marker date="1523301901362" expanded="true" signature="7175:7287" ph="INSERT INTO event_article... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Article.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Article.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="40">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -206,6 +162,52 @@
             <state relative-caret-position="119">
               <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Article.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Article.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/DatabaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-705">
+              <caret line="146" column="43" lean-forward="false" selection-start-line="146" selection-start-column="43" selection-end-line="146" selection-end-column="43" />
+              <folding>
+                <marker date="1523383909778" expanded="true" signature="1011:1070" ph="SELECT * FRO... Storage" />
+                <marker date="1523383909778" expanded="true" signature="1011:1079" ph="SELECT * FRO... Storage" />
+                <marker date="1523383909778" expanded="true" signature="1011:1089" ph="SELECT * FRO... Storage" />
+                <marker date="1523383909778" expanded="true" signature="2037:2096" ph="SELECT * FRO... Storage" />
+                <marker date="1523383909778" expanded="true" signature="2982:3161" ph="INSERT INTO Event... " />
+                <marker date="1523383909778" expanded="true" signature="2982:3194" ph="INSERT INTO Event... " />
+                <marker date="1523383909778" expanded="true" signature="2982:3196" ph="INSERT INTO Event... " />
+                <marker date="1523383909778" expanded="true" signature="4146:4171" ph="SELECT * FRO... Event" />
+                <marker date="1523383909778" expanded="true" signature="4146:4172" ph="SELECT * FRO... Event" />
+                <marker date="1523383909778" expanded="true" signature="4146:4183" ph="SELECT Event... Event" />
+                <marker date="1523383909778" expanded="true" signature="4146:4195" ph="SELECT * FRO... Event" />
+                <marker date="1523383909778" expanded="true" signature="4146:4198" ph="SELECT * FRO... Event" />
+                <marker date="1523383909778" expanded="true" signature="4146:4199" ph="SELECT Event... Event" />
+                <marker date="1523383909778" expanded="true" signature="5375:5422" ph="SELECT * FRO... Event_Article" />
+                <marker date="1523383909778" expanded="true" signature="5375:5435" ph="SELECT * FRO... Event_Article" />
+                <marker date="1523383909778" expanded="true" signature="5375:5436" ph="SELECT * FRO... Event_Article" />
+                <marker date="1523383909778" expanded="true" signature="6246:6283" ph="SELECT * FRO... Storage" />
+                <marker date="1523383909778" expanded="true" signature="6246:6286" ph="SELECT * FRO... Storage" />
+                <marker date="1523383909778" expanded="true" signature="6246:6287" ph="SELECT * FRO... Storage" />
+                <marker date="1523383909778" expanded="true" signature="6246:6288" ph="SELECT * FRO... Storage" />
+                <marker date="1523383909778" expanded="true" signature="6246:6302" ph="SELECT * FRO... Storage" />
+                <marker date="1523383909778" expanded="true" signature="7177:7262" ph="INSERT INTO event_article... " />
+                <marker date="1523383909778" expanded="true" signature="7177:7264" ph="INSERT INTO event_article... " />
+                <marker date="1523383909778" expanded="true" signature="7177:7285" ph="INSERT INTO event_article... " />
+                <marker date="1523383909778" expanded="true" signature="7177:7289" ph="INSERT INTO event_article... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -272,18 +274,19 @@
         <option value="$PROJECT_DIR$/src/sample/FilteredChecklist.fxml" />
         <option value="$PROJECT_DIR$/src/sample/RootLayoutController.java" />
         <option value="$PROJECT_DIR$/src/sample/AnchorPaneNode.java" />
-        <option value="$PROJECT_DIR$/src/sample/TodaysEventController.java" />
-        <option value="$PROJECT_DIR$/src/sample/FullCalendarView.java" />
         <option value="$PROJECT_DIR$/src/sample/HasArticle.java" />
         <option value="$PROJECT_DIR$/src/sample/ChoseCategoryController.java" />
         <option value="$PROJECT_DIR$/src/sample/NewEventController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Article.java" />
         <option value="$PROJECT_DIR$/src/sample/FailResult.java" />
         <option value="$PROJECT_DIR$/src/sample/EventArticle.java" />
         <option value="$PROJECT_DIR$/src/sample/Event.java" />
-        <option value="$PROJECT_DIR$/src/sample/DatabaseController.java" />
         <option value="$PROJECT_DIR$/src/sample/FilteredChecklistController.java" />
+        <option value="$PROJECT_DIR$/src/sample/DatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Article.java" />
+        <option value="$PROJECT_DIR$/src/sample/ArticleAmount.java" />
+        <option value="$PROJECT_DIR$/src/sample/TodaysEventController.java" />
         <option value="$PROJECT_DIR$/src/sample/TodaysEvent.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FullCalendarView.java" />
       </list>
     </option>
   </component>
@@ -319,6 +322,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -346,8 +351,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -363,7 +366,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AddressApp-Part-1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eventPlanner" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -563,12 +566,13 @@
       <workItem from="1523124474675" duration="5844000" />
       <workItem from="1523193632692" duration="27323000" />
       <workItem from="1523270725487" duration="3407000" />
-      <workItem from="1523297077985" duration="9627000" />
+      <workItem from="1523297077985" duration="10225000" />
+      <workItem from="1523382591514" duration="8728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328987000" />
+    <option name="totallyTimeSpent" value="338313000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,16 +593,16 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05206074" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11171366" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08901919" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3373102" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30802602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -635,13 +639,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/sample/TodaysEventController.java</url>
-          <line>39</line>
+          <line>50</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/sample/TodaysEventController.java</url>
-          <line>25</line>
+          <line>35</line>
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
@@ -729,20 +733,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Calendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="69" column="65" lean-forward="false" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Formatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="1625" column="45" lean-forward="false" selection-start-line="1625" selection-start-column="38" selection-end-line="1625" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/time/YearMonth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2771">
@@ -783,14 +773,14 @@
     <entry file="file://$PROJECT_DIR$/src/sample/Serving.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/StandardEquipment.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/ChecklistEdit.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="591">
           <caret line="56" column="104" lean-forward="false" selection-start-line="56" selection-start-column="104" selection-end-line="56" selection-end-column="104" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MUSIC.java" />
@@ -861,14 +851,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ChoseCategory.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="37" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/event/EventHandler.java">
@@ -900,36 +890,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/NewEvent.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="138" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/RootLayout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RootLayout.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="101" lean-forward="false" selection-start-line="12" selection-start-column="101" selection-end-line="12" selection-end-column="101" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FilteredChecklist.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+      <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FilteredChecklist.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="261" lean-forward="false" selection-start-line="8" selection-start-column="234" selection-end-line="8" selection-end-column="261" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/event/Event.java">
@@ -952,21 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/TodaysEventController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FullCalendarView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="112" column="5" lean-forward="false" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1000,19 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ChoseCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="57" column="21" lean-forward="false" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
-          <folding>
-            <element signature="e#1616#1617#0" expanded="false" />
-            <element signature="e#1644#1645#0" expanded="false" />
-            <element signature="e#1688#1689#0" expanded="false" />
-            <element signature="e#1721#1722#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/NewEventController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1360">
@@ -1021,39 +983,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/com.mysql.jdbc_5.1.5.jar!/com/mysql/jdbc/StatementImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="214" column="0" lean-forward="false" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AnchorPaneNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-          <folding>
-            <element signature="e#1986#1987#0" expanded="true" />
-            <element signature="e#2013#2014#0" expanded="true" />
-            <element signature="e#2056#2057#0" expanded="true" />
-            <element signature="e#2088#2089#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/EventArticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,73 +1000,145 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="561">
           <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding>
-            <element signature="e#1388#1389#0" expanded="true" />
-            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="false" />
+            <element signature="e#1413#1414#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="27999">
           <caret line="1770" column="0" lean-forward="false" selection-start-line="1770" selection-start-column="0" selection-end-line="1770" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/control/TableView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="842" column="22" lean-forward="false" selection-start-line="842" selection-start-column="22" selection-end-line="842" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ArticleAmount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FullCalendarView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="107" column="52" lean-forward="true" selection-start-line="107" selection-start-column="52" selection-end-line="107" selection-end-column="52" />
+          <folding>
+            <element signature="e#5153#5154#0" expanded="true" />
+            <element signature="e#5184#5185#0" expanded="true" />
+            <element signature="e#5247#5248#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/TodaysEventController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#1435#1436#0" expanded="true" />
+            <element signature="e#1480#1481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/TodaysEvent.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FilteredChecklistController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="56" column="96" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ChoseCategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="57" column="21" lean-forward="false" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AnchorPaneNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/EventArticle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/DatabaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+        <state relative-caret-position="-705">
+          <caret line="146" column="43" lean-forward="false" selection-start-line="146" selection-start-column="43" selection-end-line="146" selection-end-column="43" />
           <folding>
-            <marker date="1523301901362" expanded="true" signature="1011:1070" ph="SELECT * FRO... Storage" />
-            <marker date="1523301901362" expanded="true" signature="1011:1079" ph="SELECT * FRO... Storage" />
-            <marker date="1523301901362" expanded="true" signature="1011:1089" ph="SELECT * FRO... Storage" />
-            <marker date="1523301901362" expanded="true" signature="2035:2094" ph="SELECT * FRO... Storage" />
-            <marker date="1523301901362" expanded="true" signature="2980:3159" ph="INSERT INTO Event... " />
-            <marker date="1523301901362" expanded="true" signature="2980:3192" ph="INSERT INTO Event... " />
-            <marker date="1523301901362" expanded="true" signature="2980:3194" ph="INSERT INTO Event... " />
-            <marker date="1523301901362" expanded="true" signature="4144:4169" ph="SELECT * FRO... Event" />
-            <marker date="1523301901362" expanded="true" signature="4144:4170" ph="SELECT * FRO... Event" />
-            <marker date="1523301901362" expanded="true" signature="4144:4181" ph="SELECT Event... Event" />
-            <marker date="1523301901362" expanded="true" signature="4144:4193" ph="SELECT * FRO... Event" />
-            <marker date="1523301901362" expanded="true" signature="4144:4196" ph="SELECT * FRO... Event" />
-            <marker date="1523301901362" expanded="true" signature="4144:4197" ph="SELECT Event... Event" />
-            <marker date="1523301901362" expanded="true" signature="5373:5420" ph="SELECT * FRO... Event_Article" />
-            <marker date="1523301901362" expanded="true" signature="5373:5433" ph="SELECT * FRO... Event_Article" />
-            <marker date="1523301901362" expanded="true" signature="5373:5434" ph="SELECT * FRO... Event_Article" />
-            <marker date="1523301901362" expanded="true" signature="6244:6281" ph="SELECT * FRO... Storage" />
-            <marker date="1523301901362" expanded="true" signature="6244:6284" ph="SELECT * FRO... Storage" />
-            <marker date="1523301901362" expanded="true" signature="6244:6285" ph="SELECT * FRO... Storage" />
-            <marker date="1523301901362" expanded="true" signature="6244:6286" ph="SELECT * FRO... Storage" />
-            <marker date="1523301901362" expanded="true" signature="6244:6300" ph="SELECT * FRO... Storage" />
-            <marker date="1523301901362" expanded="true" signature="7175:7260" ph="INSERT INTO event_article... " />
-            <marker date="1523301901362" expanded="true" signature="7175:7262" ph="INSERT INTO event_article... " />
-            <marker date="1523301901362" expanded="true" signature="7175:7283" ph="INSERT INTO event_article... " />
-            <marker date="1523301901362" expanded="true" signature="7175:7287" ph="INSERT INTO event_article... " />
+            <marker date="1523383909778" expanded="true" signature="1011:1070" ph="SELECT * FRO... Storage" />
+            <marker date="1523383909778" expanded="true" signature="1011:1079" ph="SELECT * FRO... Storage" />
+            <marker date="1523383909778" expanded="true" signature="1011:1089" ph="SELECT * FRO... Storage" />
+            <marker date="1523383909778" expanded="true" signature="2037:2096" ph="SELECT * FRO... Storage" />
+            <marker date="1523383909778" expanded="true" signature="2982:3161" ph="INSERT INTO Event... " />
+            <marker date="1523383909778" expanded="true" signature="2982:3194" ph="INSERT INTO Event... " />
+            <marker date="1523383909778" expanded="true" signature="2982:3196" ph="INSERT INTO Event... " />
+            <marker date="1523383909778" expanded="true" signature="4146:4171" ph="SELECT * FRO... Event" />
+            <marker date="1523383909778" expanded="true" signature="4146:4172" ph="SELECT * FRO... Event" />
+            <marker date="1523383909778" expanded="true" signature="4146:4183" ph="SELECT Event... Event" />
+            <marker date="1523383909778" expanded="true" signature="4146:4195" ph="SELECT * FRO... Event" />
+            <marker date="1523383909778" expanded="true" signature="4146:4198" ph="SELECT * FRO... Event" />
+            <marker date="1523383909778" expanded="true" signature="4146:4199" ph="SELECT Event... Event" />
+            <marker date="1523383909778" expanded="true" signature="5375:5422" ph="SELECT * FRO... Event_Article" />
+            <marker date="1523383909778" expanded="true" signature="5375:5435" ph="SELECT * FRO... Event_Article" />
+            <marker date="1523383909778" expanded="true" signature="5375:5436" ph="SELECT * FRO... Event_Article" />
+            <marker date="1523383909778" expanded="true" signature="6246:6283" ph="SELECT * FRO... Storage" />
+            <marker date="1523383909778" expanded="true" signature="6246:6286" ph="SELECT * FRO... Storage" />
+            <marker date="1523383909778" expanded="true" signature="6246:6287" ph="SELECT * FRO... Storage" />
+            <marker date="1523383909778" expanded="true" signature="6246:6288" ph="SELECT * FRO... Storage" />
+            <marker date="1523383909778" expanded="true" signature="6246:6302" ph="SELECT * FRO... Storage" />
+            <marker date="1523383909778" expanded="true" signature="7177:7262" ph="INSERT INTO event_article... " />
+            <marker date="1523383909778" expanded="true" signature="7177:7264" ph="INSERT INTO event_article... " />
+            <marker date="1523383909778" expanded="true" signature="7177:7285" ph="INSERT INTO event_article... " />
+            <marker date="1523383909778" expanded="true" signature="7177:7289" ph="INSERT INTO event_article... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FilteredChecklistController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/TodaysEvent.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="169" lean-forward="false" selection-start-line="8" selection-start-column="169" selection-end-line="8" selection-end-column="169" />
-          <folding />
         </state>
       </provider>
     </entry>

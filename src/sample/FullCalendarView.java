@@ -96,6 +96,11 @@ public class FullCalendarView {
                 ap.getChildren().remove(0);
             }
             Text txt = new Text(String.valueOf(calendarDate.getDayOfMonth()));
+
+            if(!DatabaseController.searchTodaysEvents(calendarDate).isEmpty()) {
+                txt.setUnderline(true);
+                txt.setText(">>" + txt.getText() + "<<");
+            }
             ap.setDate(calendarDate);
             ap.setTopAnchor(txt, 5.0);
             ap.setLeftAnchor(txt, 5.0);

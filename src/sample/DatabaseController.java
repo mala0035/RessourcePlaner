@@ -51,7 +51,7 @@ public class DatabaseController {
 
         try {
             Statement statement = databaseConnection.createStatement();
-            String collect = ids.stream().map(id -> id.toString()).collect(Collectors.joining(","));
+            String collect = ids.stream().map(id -> id.toString()).collect(Collectors.joining("','"));
             String getArticlesFromIds = "SELECT * FROM Storage WHERE StorageID IN ('"+ collect + "')";
 
             ResultSet resultSet = statement.executeQuery(getArticlesFromIds);

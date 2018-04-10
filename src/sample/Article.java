@@ -19,6 +19,8 @@ public class Article {
 
     }
 
+
+
     public String getName() {
         return name;
     }
