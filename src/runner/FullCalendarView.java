@@ -12,18 +12,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Locale;
 
-
 public class FullCalendarView {
 
+    public HBox titleBar;
     private ArrayList<AnchorPaneNode> allCalendarDays = new ArrayList<>(35);
     private VBox view;
     private Text calendarTitle;
     private LocalDate currentYearMonth;
-    public HBox titleBar;
-
 
     /**
      * Create a calendar view
+     *
      * @param yearMonth year month to create the calendar of
      */
     public FullCalendarView(LocalDate yearMonth) {
@@ -37,15 +36,15 @@ public class FullCalendarView {
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 7; j++) {
                 AnchorPaneNode ap = new AnchorPaneNode();
-                ap.setPrefSize(200,200);
-                calendar.add(ap,j,i);
+                ap.setPrefSize(200, 200);
+                calendar.add(ap, j, i);
                 allCalendarDays.add(ap);
             }
         }
         // Days of the week labels
-        Text[] dayNames = new Text[]{ new Text("Sonntag"), new Text("Montag"), new Text("Dienstag"),
+        Text[] dayNames = new Text[]{new Text("Sonntag"), new Text("Montag"), new Text("Dienstag"),
                 new Text("Mittwoch"), new Text("Donnerstag"), new Text("Freitag"),
-                new Text("Samstag") };
+                new Text("Samstag")};
         GridPane dayLabels = new GridPane();
         dayLabels.setPrefWidth(600);
         Integer col = 0;
@@ -67,26 +66,22 @@ public class FullCalendarView {
         titleBar.setAlignment(Pos.CENTER);
         titleBar.setSpacing(10);
 
-
-
         // Populate calendar with the appropriate day numbers
         populateCalendar(yearMonth);
         // Create the calendar view
-        view = new VBox(dayLabels, calendar,titleBar);
-
-
-
+        view = new VBox(dayLabels, calendar, titleBar);
     }
 
     /**
      * Set the days of the calendar to correspond to the appropriate date
+     *
      * @param yearMonth year and month of month to render
      */
     public void populateCalendar(LocalDate yearMonth) {
         // Get the date we want to start with on the calendar
         LocalDate calendarDate = LocalDate.of(yearMonth.getYear(), yearMonth.getMonthValue(), 1);
         // Dial back the day until it is SUNDAY (unless the month starts on a sunday)
-        while (!calendarDate.getDayOfWeek().toString().equals("SUNDAY") ) {
+        while (!calendarDate.getDayOfWeek().toString().equals("SUNDAY")) {
             calendarDate = calendarDate.minusDays(1);
         }
         // Populate the calendar with day numbers
@@ -95,8 +90,7 @@ public class FullCalendarView {
                 ap.getChildren().remove(0);
             }
             Text txt = new Text(String.valueOf(calendarDate.getDayOfMonth()));
-
-            if(!EventRepository.searchTodaysEvents(calendarDate).isEmpty()) {
+            if (!EventRepository.searchTodaysEvents(calendarDate).isEmpty()) {
                 txt.setUnderline(true);
                 txt.setText(">>" + txt.getText() + "<<");
             }
@@ -106,14 +100,9 @@ public class FullCalendarView {
             ap.getChildren().add(txt);
             calendarDate = calendarDate.plusDays(1);
         }
-        // Change the title of the calendar
-
-       // SimpleDateFormat formatDateToGermany = new SimpleDateFormat( "LLLL, YY", Locale.GERMANY );
-       // Date currentGermanyMonth = new Date(currentYearMonth.getYear(),yearMonth.getMonthValue(),0);
         DateTimeFormatter formatDateToGermany = DateTimeFormatter.ofPattern("MMMM-yyyy", Locale.GERMANY);
-        LocalDate currentGermanyMonth = LocalDate.of(currentYearMonth.getYear(),yearMonth.getMonthValue(),currentYearMonth.getDayOfMonth());
+        LocalDate currentGermanyMonth = LocalDate.of(currentYearMonth.getYear(), yearMonth.getMonthValue(), currentYearMonth.getDayOfMonth());
         calendarTitle.setText(formatDateToGermany.format(currentGermanyMonth));
-
     }
 
     /**
@@ -132,22 +121,6 @@ public class FullCalendarView {
         populateCalendar(currentYearMonth);
     }
 
-    public VBox getView() {
-
-        return view;
-    }
-    public HBox getTitleBar() {
-        return titleBar;
-    }
-
-
-
-    public ArrayList<AnchorPaneNode> getAllCalendarDays() {
-        return allCalendarDays;
-    }
-
-    public void setAllCalendarDays(ArrayList<AnchorPaneNode> allCalendarDays) {
-        this.allCalendarDays = allCalendarDays;
-    }
+    public VBox getView() { return view; }
 }
 

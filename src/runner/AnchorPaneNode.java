@@ -1,4 +1,5 @@
 package runner;
+
 import db.EventRepository;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +10,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Event;
 import service.TodaysEventController;
-
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Collection;
@@ -25,6 +25,7 @@ public class AnchorPaneNode extends AnchorPane {
 
     /**
      * Create a anchor pane node. Date is not assigned in the constructor.
+     *
      * @param children children of the anchor pane
      */
     public AnchorPaneNode(Node... children) {
@@ -34,19 +35,16 @@ public class AnchorPaneNode extends AnchorPane {
     }
 
     @FXML
-    private void init (){
+    private void init() {
         try {
             FXMLLoader fxmlLoader4 = new FXMLLoader(getClass().getClassLoader().getResource("view/TodaysEvent.fxml"));
             Parent root5 = fxmlLoader4.load();
             TodaysEventController fcController = fxmlLoader4.getController();
             fcController.setEvents(this);
-
             stage4.setTitle("Events");
             stage4.setScene(new Scene(root5));
             stage4.show();
-
             EventRepository.searchTodaysEvents(date);
-
         } catch (IOException e) {
             e.printStackTrace();
         }

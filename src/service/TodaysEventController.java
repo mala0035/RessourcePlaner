@@ -1,8 +1,6 @@
 package service;
-
 import db.ArticleRepository;
 import db.EventArticleRepository;
-import model.*;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
@@ -10,9 +8,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import model.Article;
+import model.ArticleAmount;
+import model.Event;
+import model.EventArticle;
 import runner.AnchorPaneNode;
-
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class TodaysEventController extends AnchorPane {
@@ -26,12 +30,8 @@ public class TodaysEventController extends AnchorPane {
     private TableColumn eventPlaceColumn;
     @FXML
     private TableColumn contactPersonColumn;
-
-    @FXML
-    private TableColumn needArticles;
     @FXML
     private ListView<ArticleAmount> articlesTable;
-
 
     @FXML
     public void initialize() {
@@ -40,9 +40,8 @@ public class TodaysEventController extends AnchorPane {
         eventDateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         eventPlaceColumn.setCellValueFactory(new PropertyValueFactory<>("place"));
         contactPersonColumn.setCellValueFactory(new PropertyValueFactory<>("contactPerson"));
-        events.getSelectionModel().selectedItemProperty().addListener((observable, oldVaue, newValue) -> setNeedArticles(newValue) );
+        events.getSelectionModel().selectedItemProperty().addListener((observable, oldVaue, newValue) -> setNeedArticles(newValue));
     }
-
 
     @FXML
     private void handleOKButton() {
@@ -52,9 +51,7 @@ public class TodaysEventController extends AnchorPane {
     public void setEvents(AnchorPaneNode controller) {
         AnchorPaneNode date = new AnchorPaneNode();
         date.getDate();
-
         events.setItems(FXCollections.observableArrayList(controller.getTodaysEvents()));
-
     }
 
     private void setNeedArticles(Event event) {
@@ -65,6 +62,5 @@ public class TodaysEventController extends AnchorPane {
             articles.stream().forEach(article -> articleViewDetails.add(new ArticleAmount(article, articles.stream().filter(art -> art.getArticleNr().equals(article.getArticleNr())).count())));
             articlesTable.setItems(FXCollections.observableArrayList(articleViewDetails));
         }
-
     }
 }

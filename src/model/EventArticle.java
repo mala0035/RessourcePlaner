@@ -2,12 +2,10 @@ package model;
 
 public class EventArticle {
 
-
     private final int articleId;
-
     private String eventId;
 
-    public EventArticle(int articleId, String eventId){
+    public EventArticle(int articleId, String eventId) {
         this.articleId = articleId;
         this.eventId = eventId;
     }
@@ -19,5 +17,4 @@ public class EventArticle {
     public String getEventId() {
         return eventId;
     }
-
 }

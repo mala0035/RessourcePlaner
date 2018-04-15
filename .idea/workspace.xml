@@ -1,54 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/runner/Main.java" line="18" />
+    <bookmark url="file://$PROJECT_DIR$/src/runner/Main.java" line="17" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/AnchorPaneNode.class" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/AnchorPaneNode.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/Article.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/ArticleAmount.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/Categories.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/ChecklistEdit.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/ChecklistEditController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/ChoseCategory.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/ChoseCategoryController.class" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/ChoseCategoryController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/DatabaseController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/Event.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/EventArticle.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/FilteredChecklist.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/FilteredChecklistController.class" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/FilteredChecklistController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/FullCalendarView.class" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/FullCalendarView.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/NewEvent.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/NewEventController.class" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/NewEventController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/RootLayout.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/RootLayoutController.class" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/RootLayoutController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/TodaysEvent.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/TodaysEventController.class" afterPath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/TodaysEventController.class" />
-      <change beforePath="$PROJECT_DIR$/src/sample/AnchorPaneNode.java" afterPath="$PROJECT_DIR$/src/runner/AnchorPaneNode.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Article.java" afterPath="$PROJECT_DIR$/src/model/Article.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ArticleAmount.java" afterPath="$PROJECT_DIR$/src/model/ArticleAmount.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Categories.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ChecklistEdit.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ChecklistEditController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ChoseCategory.fxml" afterPath="$PROJECT_DIR$/src/view/ChoseCategory.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ChoseCategoryController.java" afterPath="$PROJECT_DIR$/src/service/ChoseCategoryController.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/DatabaseController.java" afterPath="$PROJECT_DIR$/src/db/BaseRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Event.java" afterPath="$PROJECT_DIR$/src/model/Event.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/EventArticle.java" afterPath="$PROJECT_DIR$/src/model/EventArticle.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FailResult.java" afterPath="$PROJECT_DIR$/src/service/FailResult.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FilteredChecklist.fxml" afterPath="$PROJECT_DIR$/src/view/FilteredChecklist.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FilteredChecklistController.java" afterPath="$PROJECT_DIR$/src/service/FilteredChecklistController.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FullCalendarView.java" afterPath="$PROJECT_DIR$/src/runner/FullCalendarView.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/runner/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/NewEvent.fxml" afterPath="$PROJECT_DIR$/src/view/NewEvent.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/NewEventController.java" afterPath="$PROJECT_DIR$/src/service/NewEventController.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/RootLayout.fxml" afterPath="$PROJECT_DIR$/src/view/RootLayout.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/RootLayoutController.java" afterPath="$PROJECT_DIR$/src/service/RootLayoutController.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/TodaysEvent.fxml" afterPath="$PROJECT_DIR$/src/view/TodaysEvent.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/sample/TodaysEventController.java" afterPath="$PROJECT_DIR$/src/service/TodaysEventController.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/AnchorPaneNode.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/ChoseCategoryController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/FailResult.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/FilteredChecklistController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/FullCalendarView.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/NewEventController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/RootLayoutController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/RessourcePlaner/sample/TodaysEventController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/db/ArticleRepository.java" afterPath="$PROJECT_DIR$/src/db/ArticleRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/db/BaseRepository.java" afterPath="$PROJECT_DIR$/src/db/BaseRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/db/EventArticleRepository.java" afterPath="$PROJECT_DIR$/src/db/EventArticleRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/db/EventRepository.java" afterPath="$PROJECT_DIR$/src/db/EventRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/Article.java" afterPath="$PROJECT_DIR$/src/model/Article.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/ArticleAmount.java" afterPath="$PROJECT_DIR$/src/model/ArticleAmount.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/Category.java" afterPath="$PROJECT_DIR$/src/model/Category.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/Event.java" afterPath="$PROJECT_DIR$/src/model/Event.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/EventArticle.java" afterPath="$PROJECT_DIR$/src/model/EventArticle.java" />
+      <change beforePath="$PROJECT_DIR$/src/runner/AnchorPaneNode.java" afterPath="$PROJECT_DIR$/src/runner/AnchorPaneNode.java" />
+      <change beforePath="$PROJECT_DIR$/src/runner/FullCalendarView.java" afterPath="$PROJECT_DIR$/src/runner/FullCalendarView.java" />
+      <change beforePath="$PROJECT_DIR$/src/runner/Main.java" afterPath="$PROJECT_DIR$/src/runner/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/service/ChoseCategoryController.java" afterPath="$PROJECT_DIR$/src/service/ChoseCategoryController.java" />
+      <change beforePath="$PROJECT_DIR$/src/service/FailResult.java" afterPath="$PROJECT_DIR$/src/service/FailResult.java" />
+      <change beforePath="$PROJECT_DIR$/src/service/FilteredChecklistController.java" afterPath="$PROJECT_DIR$/src/service/FilteredChecklistController.java" />
+      <change beforePath="$PROJECT_DIR$/src/service/NewEventController.java" afterPath="$PROJECT_DIR$/src/service/NewEventController.java" />
+      <change beforePath="$PROJECT_DIR$/src/service/RootLayoutController.java" afterPath="$PROJECT_DIR$/src/service/RootLayoutController.java" />
+      <change beforePath="$PROJECT_DIR$/src/service/TodaysEventController.java" afterPath="$PROJECT_DIR$/src/service/TodaysEventController.java" />
+      <change beforePath="$PROJECT_DIR$/src/view/ChoseCategory.fxml" afterPath="$PROJECT_DIR$/src/view/ChoseCategory.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/view/FilteredChecklist.fxml" afterPath="$PROJECT_DIR$/src/view/FilteredChecklist.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/view/NewEvent.fxml" afterPath="$PROJECT_DIR$/src/view/NewEvent.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/view/RootLayout.fxml" afterPath="$PROJECT_DIR$/src/view/RootLayout.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/view/TodaysEvent.fxml" afterPath="$PROJECT_DIR$/src/view/TodaysEvent.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,33 +100,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FilteredChecklistController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FilteredChecklistController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/service/FilteredChecklistController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/db/BaseRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnchorPaneNode.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/runner/AnchorPaneNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+            <state relative-caret-position="434">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#4965#4966#0" expanded="true" />
+                <element signature="e#5019#5020#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/runner/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+              <folding>
+                <element signature="e#1807#1808#0" expanded="true" />
+                <element signature="e#1865#1866#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,18 +129,8 @@
       <file leaf-file-name="FullCalendarView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/runner/FullCalendarView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RootLayoutController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/RootLayoutController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="1904">
+              <caret line="123" column="42" lean-forward="false" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -166,8 +139,8 @@
       <file leaf-file-name="NewEventController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/service/NewEventController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="187">
+              <caret line="51" column="60" lean-forward="true" selection-start-line="51" selection-start-column="60" selection-end-line="51" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -176,47 +149,22 @@
       <file leaf-file-name="ArticleRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/db/ArticleRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1252">
-              <caret line="79" column="57" lean-forward="false" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
+            <state relative-caret-position="816">
+              <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1523714424650" expanded="true" signature="757:835" ph="SELECT * FRO... Storage" />
-                <marker date="1523714424650" expanded="true" signature="1791:1850" ph="SELECT * FRO... Storage" />
-                <marker date="1523714424650" expanded="true" signature="2788:2844" ph="SELECT * FRO... Storage" />
+                <marker date="1523718168277" expanded="true" signature="756:834" ph="SELECT * FRO... Storage" />
+                <marker date="1523718168277" expanded="true" signature="1785:1845" ph="SELECT * FRO... Storage" />
+                <marker date="1523718168277" expanded="true" signature="2777:2837" ph="SELECT * FRO... Storage" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TodaysEventController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/TodaysEventController.java">
+      <file leaf-file-name="BaseRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/db/BaseRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="55" column="77" lean-forward="false" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1487#1488#0" expanded="true" />
-                <element signature="e#1532#1533#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FailResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/FailResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChoseCategoryController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/ChoseCategoryController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="391">
+              <caret line="28" column="96" lean-forward="false" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -261,13 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/Serving.java" />
-        <option value="$PROJECT_DIR$/src/sample/Merchandise.java" />
-        <option value="$PROJECT_DIR$/src/sample/StandardEquipment.java" />
-        <option value="$PROJECT_DIR$/src/sample/Others.java" />
-        <option value="$PROJECT_DIR$/src/sample/Music.java" />
-        <option value="$PROJECT_DIR$/src/sample/FullCalenderView.java" />
-        <option value="$PROJECT_DIR$/src/sample/FXMLMain.java" />
         <option value="$PROJECT_DIR$/src/sample/tryToOWrite.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/ChecklistEdit.fxml" />
@@ -290,9 +231,6 @@
         <option value="$PROJECT_DIR$/src/Model/Article.java" />
         <option value="$PROJECT_DIR$/src/Model/ArticleAmount.java" />
         <option value="$PROJECT_DIR$/src/sample/Category.java" />
-        <option value="$PROJECT_DIR$/src/model/Event.java" />
-        <option value="$PROJECT_DIR$/src/model/Category.java" />
-        <option value="$PROJECT_DIR$/src/model/EventArticle.java" />
         <option value="$PROJECT_DIR$/src/sample/DatabaseController.java" />
         <option value="$PROJECT_DIR$/src/sample/RootLayoutController.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
@@ -300,17 +238,28 @@
         <option value="$PROJECT_DIR$/src/sample/ChoseCategoryController.java" />
         <option value="$PROJECT_DIR$/src/model/DatabaseController.java" />
         <option value="$PROJECT_DIR$/src/db/DatabaseController.java" />
-        <option value="$PROJECT_DIR$/src/db/EventRepository.java" />
-        <option value="$PROJECT_DIR$/src/db/ArticleRepository.java" />
-        <option value="$PROJECT_DIR$/src/db/BaseRepository.java" />
-        <option value="$PROJECT_DIR$/src/db/EventArticleRepository.java" />
         <option value="$PROJECT_DIR$/src/sample/TodaysEventController.java" />
         <option value="$PROJECT_DIR$/src/sample/FilteredChecklistController.java" />
         <option value="$PROJECT_DIR$/src/sample/FullCalendarView.java" />
-        <option value="$PROJECT_DIR$/src/service/TodaysEventController.java" />
-        <option value="$PROJECT_DIR$/src/service/FailResult.java" />
         <option value="$PROJECT_DIR$/src/sample/AnchorPaneNode.java" />
         <option value="$PROJECT_DIR$/src/runner/AnchorPaneNode.java" />
+        <option value="$PROJECT_DIR$/src/runner/FullCalendarView.java" />
+        <option value="$PROJECT_DIR$/src/service/ChoseCategoryController.java" />
+        <option value="$PROJECT_DIR$/src/db/ArticleRepository.java" />
+        <option value="$PROJECT_DIR$/src/db/EventArticleRepository.java" />
+        <option value="$PROJECT_DIR$/src/db/EventRepository.java" />
+        <option value="$PROJECT_DIR$/src/model/Article.java" />
+        <option value="$PROJECT_DIR$/src/model/ArticleAmount.java" />
+        <option value="$PROJECT_DIR$/src/model/Category.java" />
+        <option value="$PROJECT_DIR$/src/model/Event.java" />
+        <option value="$PROJECT_DIR$/src/model/EventArticle.java" />
+        <option value="$PROJECT_DIR$/src/service/FailResult.java" />
+        <option value="$PROJECT_DIR$/src/service/NewEventController.java" />
+        <option value="$PROJECT_DIR$/src/service/RootLayoutController.java" />
+        <option value="$PROJECT_DIR$/src/service/TodaysEventController.java" />
+        <option value="$PROJECT_DIR$/src/runner/Main.java" />
+        <option value="$PROJECT_DIR$/src/service/FilteredChecklistController.java" />
+        <option value="$PROJECT_DIR$/src/db/BaseRepository.java" />
       </list>
     </option>
   </component>
@@ -321,7 +270,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -621,12 +570,12 @@
       <workItem from="1523382591514" duration="12085000" />
       <workItem from="1523473508696" duration="1416000" />
       <workItem from="1523625348380" duration="633000" />
-      <workItem from="1523711252144" duration="3741000" />
+      <workItem from="1523711252144" duration="11934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347460000" />
+    <option name="totallyTimeSpent" value="355653000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,8 +587,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -648,7 +596,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25813448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25813448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14179105" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
@@ -658,7 +606,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30802602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30368763" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -693,7 +641,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/service/TodaysEventController.java</url>
-          <line>52</line>
+          <line>51</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
@@ -705,19 +653,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/runner/AnchorPaneNode.java</url>
-          <line>38</line>
+          <line>39</line>
           <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/runner/AnchorPaneNode.java</url>
-          <line>63</line>
+          <line>61</line>
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/service/FilteredChecklistController.java</url>
-          <line>63</line>
+          <line>57</line>
           <properties />
           <option name="timeStamp" value="69" />
         </line-breakpoint>
@@ -940,26 +888,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Categories.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -983,38 +915,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ArticleAmount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/EventArticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/runner/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="38" column="77" lean-forward="false" selection-start-line="38" selection-start-column="77" selection-end-line="38" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db/Event.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1023,79 +923,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/EventRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="33" column="57" lean-forward="false" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1523714115575" expanded="true" signature="479:693" ph="INSERT INTO Event... " />
-            <marker date="1523714115575" expanded="true" signature="1138:1190" ph="SELECT * FRO... Event" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db/EventArticleRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="43" column="57" lean-forward="false" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+        <state relative-caret-position="561">
+          <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1523714424628" expanded="true" signature="681:742" ph="SELECT * FRO... Event_Article" />
-            <marker date="1523714424628" expanded="true" signature="1525:1637" ph="INSERT INTO event_article... " />
+            <marker date="1523718168333" expanded="true" signature="678:743" ph="SELECT * FRO... Event_Article" />
+            <marker date="1523718168333" expanded="true" signature="1538:1652" ph="INSERT INTO event_article... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/ArticleRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/db/EventRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1252">
-          <caret line="79" column="57" lean-forward="false" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
+        <state relative-caret-position="714">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1523714424650" expanded="true" signature="757:835" ph="SELECT * FRO... Storage" />
-            <marker date="1523714424650" expanded="true" signature="1791:1850" ph="SELECT * FRO... Storage" />
-            <marker date="1523714424650" expanded="true" signature="2788:2844" ph="SELECT * FRO... Storage" />
+            <marker date="1523718168325" expanded="true" signature="479:724" ph="INSERT INTO Event... " />
+            <marker date="1523718168325" expanded="true" signature="1165:1217" ph="SELECT * FRO... Event" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/BaseRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Article.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/runner/FullCalendarView.java">
+    <entry file="file://$PROJECT_DIR$/src/model/ArticleAmount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="102">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="55" lean-forward="false" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/EventArticle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/runner/AnchorPaneNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="46" column="53" lean-forward="false" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/ChoseCategoryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="-316">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#856#857#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/FilteredChecklistController.java">
+    <entry file="file://$PROJECT_DIR$/src/service/FailResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/NewEventController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1103,37 +1015,76 @@
     <entry file="file://$PROJECT_DIR$/src/service/RootLayoutController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/FailResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/TodaysEventController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="55" column="77" lean-forward="false" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
+        <state relative-caret-position="-10">
+          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="false" />
+            <element signature="e#1641#1642#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/runner/AnchorPaneNode.java">
+    <entry file="file://$PROJECT_DIR$/src/runner/FullCalendarView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+        <state relative-caret-position="1904">
+          <caret line="123" column="42" lean-forward="false" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/runner/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1807#1808#0" expanded="true" />
+            <element signature="e#1865#1866#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/BaseRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="96" lean-forward="false" selection-start-line="28" selection-start-column="96" selection-end-line="28" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/NewEventController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="51" column="60" lean-forward="true" selection-start-line="51" selection-start-column="60" selection-end-line="51" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/ArticleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <marker date="1523718168277" expanded="true" signature="756:834" ph="SELECT * FRO... Storage" />
+            <marker date="1523718168277" expanded="true" signature="1785:1845" ph="SELECT * FRO... Storage" />
+            <marker date="1523718168277" expanded="true" signature="2777:2837" ph="SELECT * FRO... Storage" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/FilteredChecklistController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#4965#4966#0" expanded="true" />
+            <element signature="e#5019#5020#0" expanded="true" />
           </folding>
         </state>
       </provider>

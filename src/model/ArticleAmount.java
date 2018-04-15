@@ -3,11 +3,11 @@ package model;
 import java.util.Objects;
 
 public class ArticleAmount {
-    private final Article article;
 
+    private final Article article;
     private final long count;
 
-    public ArticleAmount(Article article, long count){
+    public ArticleAmount(Article article, long count) {
         this.article = article;
         this.count = count;
     }
@@ -26,7 +26,7 @@ public class ArticleAmount {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return article.getName() + " (x" + count + ")";
     }
 }
