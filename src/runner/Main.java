@@ -29,6 +29,7 @@ public class Main extends Application {
         this.primaryStage.setTitle("Ressource Planer");
         initRootLayout();
         setModality();
+        System.out.println();
     }
 
     //open RootLayout window
@@ -55,6 +56,7 @@ public class Main extends Application {
 
     public static void refresh(){
     calendarView.populateCalendar(LocalDate.now());
+
     }
 
 }
