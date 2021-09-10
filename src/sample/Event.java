@@ -21,6 +21,7 @@ public class Event {
 
 
 //Teständerung
+//Teständerung 2
 
     public String getNameOfEvent() {
         return nameOfEvent.get();
