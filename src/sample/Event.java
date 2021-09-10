@@ -20,7 +20,7 @@ public class Event {
     }
 
 
-
+//Teständerung
 
     public String getNameOfEvent() {
         return nameOfEvent.get();
